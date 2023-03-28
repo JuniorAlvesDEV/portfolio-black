@@ -1,0 +1,85 @@
+.marca-intro {
+  padding: 128px 32px;
+}
+
+.nome-intro {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.font {
+  font-family: "clash";
+  font-weight: 500;
+  font-size: 14vw;
+  color: #ffffff;
+  opacity: 0;
+}
+
+.linha {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+
+.font:nth-child(1) {
+  animation: animaIntro 1s forwards;
+  animation-delay: 0.4s;
+}
+.font:nth-child(2) {
+  animation: animaIntro 1s forwards;
+  animation-delay: 0.6s;
+}
+.font:nth-child(3) {
+  animation: animaIntro 1s forwards;
+  animation-delay: 0.8s;
+}
+.font:nth-child(4) {
+  animation: animaIntro 1s forwards;
+  animation-delay: 1s;
+}
+.font:nth-child(5) {
+  animation: animaIntro 1s forwards;
+  animation-delay: 1.2s;
+}
+.font:nth-child(6) {
+  animation: animaIntro 1s forwards;
+  animation-delay: 1.4s;
+}
+.font:nth-child(7) {
+  animation: animaIntro 1s forwards;
+  animation-delay: 1.6s;
+}
+.font:nth-child(8) {
+  animation: animaIntro 1s forwards;
+  animation-delay: 1.8s;
+}
+.font:nth-child(9) {
+  animation: animaIntro 1s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes animaIntro {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0.5;
+    top: 0;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marca-intro {
+    padding: 16px;
+    padding-top: 128px;
+  }
+}
