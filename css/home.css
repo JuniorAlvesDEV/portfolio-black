@@ -1,20 +1,23 @@
 .marca-intro {
-  padding-top: 80px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nome-intro {
   text-align: center;
+  height: max-content;
 }
 
 .nome-intro h2 {
   color: #aaaaaa;
   font-family: "clash";
   font-weight: 400;
-  font-size: 5rem;
+  font-size: 4vw;
   animation: animaSub 5s forwards;
   animation-delay: 2.2s;
   opacity: 0;
-  margin-bottom: 600px;
 }
 
 @keyframes animaSub {
@@ -123,8 +126,8 @@
 .nome-foto {
   color: #aaaaaa;
   position: absolute;
-  bottom: 64px;
-  left: 64px;
+  bottom: 10%;
+  left: 10%;
 }
 
 .nome-foto span {
@@ -132,7 +135,7 @@
 }
 
 .nome {
-  font-size: 24px;
+  font-size: 1.6rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   margin-bottom: 5px;
@@ -169,6 +172,7 @@
 .techs {
   display: flex;
   gap: 128px;
+  flex-wrap: wrap;
 }
 
 .techs li {
@@ -177,4 +181,78 @@
 
 .techs img {
   object-fit: contain;
+}
+
+@media (max-width: 1280px) {
+  .titulo-sobre {
+    font-size: 7rem;
+  }
+
+  .texto-sobre {
+    font-size: 2rem;
+  }
+
+  .titulo-conhecimentos {
+    font-size: 5rem;
+  }
+
+  .texto-conhecimentos {
+    font-size: 2rem;
+  }
+
+  .techs {
+    gap: 64px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-sobre {
+    font-size: 3rem;
+  }
+
+  .texto-sobre {
+    font-size: 1rem;
+    margin-bottom: 64px;
+  }
+
+  .img-sobre {
+    margin-bottom: 64px;
+  }
+
+  .nome {
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+  }
+
+  .profissao {
+    letter-spacing: 0.05em;
+    font-size: 0.5rem;
+  }
+
+  .titulo-conhecimentos {
+    font-size: 2rem;
+  }
+
+  .texto-conhecimentos {
+    font-size: 1rem;
+    margin-bottom: 64px;
+  }
+  .estudado {
+    margin-bottom: 64px;
+  }
+  .estudado-titulo {
+    font-size: 2rem;
+  }
+
+  .techs {
+    gap: 64px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .techs li {
+    max-width: 80px;
+  }
 }

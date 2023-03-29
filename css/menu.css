@@ -77,8 +77,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
-    width: 24px;
-    height: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
   }
   .l1 {
     height: 1px;
@@ -100,21 +101,18 @@
     transition: 0.5s;
   }
 
-  .abrir-menu .hamburguer {
-    justify-content: center;
-    align-items: center;
-  }
-
   .abrir-menu .l1 {
     transform: rotatez(135deg);
-    width: 100%;
+    position: absolute;
+    top: 50%;
   }
   .abrir-menu .l2 {
     opacity: 0;
   }
   .abrir-menu .l3 {
     transform: rotatez(-135deg);
-    width: 100%;
+    position: absolute;
+    top: 50%;
   }
   .menu-bar {
     padding: 16px;
