@@ -77,6 +77,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
+    width: 24px;
+    height: 24px;
   }
   .l1 {
     height: 1px;
