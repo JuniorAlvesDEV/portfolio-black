@@ -119,7 +119,6 @@
 }
 
 .img-sobre img {
-  border-radius: 10px;
   box-shadow: 0px 0px 150px #000000;
 }
 
@@ -177,10 +176,134 @@
 
 .techs li {
   max-width: 150px;
+  position: relative;
 }
 
 .techs img {
   object-fit: contain;
+  position: relative;
+}
+
+.animaTech1 li::before,
+.animaTech2 li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #442eae;
+  bottom: -10%;
+  transform: perspective(1em) rotateX(45deg);
+  filter: blur(6px);
+  opacity: 0;
+}
+
+.techs li:hover::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #442eae;
+  bottom: -10%;
+  transform: perspective(1em) rotateX(45deg);
+  filter: blur(6px);
+  opacity: 1;
+}
+
+.scroll-ativo .animaTech1 li:nth-child(1)::before {
+  animation: animaTech3 1s;
+  animation-delay: 2s;
+}
+.scroll-ativo .animaTech1 li:nth-child(2)::before {
+  animation: animaTech3 1s;
+  animation-delay: 2.2s;
+}
+.scroll-ativo .animaTech1 li:nth-child(3)::before {
+  animation: animaTech3 1s;
+  animation-delay: 2.4s;
+}
+.scroll-ativo .animaTech1 li:nth-child(4)::before {
+  animation: animaTech3 1s;
+  animation-delay: 2.6s;
+}
+.scroll-ativo .animaTech1 li:nth-child(5)::before {
+  animation: animaTech3 1s;
+  animation-delay: 2.8s;
+}
+.scroll-ativo .animaTech2 li:nth-child(1)::before {
+  animation: animaTech3 1s;
+  animation-delay: 3s;
+}
+.scroll-ativo .animaTech2 li:nth-child(2)::before {
+  animation: animaTech3 1s;
+  animation-delay: 3.2s;
+}
+
+@keyframes animaTech3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animaTech1 li,
+.animaTech2 li {
+  opacity: 0;
+}
+
+.scroll-ativo .animaTech1 li:nth-child(1) {
+  animation: animaTech2 1s forwards;
+  animation-delay: 0.6s;
+}
+.scroll-ativo .animaTech1 li:nth-child(2) {
+  animation: animaTech2 1s forwards;
+  animation-delay: 0.8s;
+}
+.scroll-ativo .animaTech1 li:nth-child(3) {
+  animation: animaTech2 1s forwards;
+  animation-delay: 1s;
+}
+.scroll-ativo .animaTech1 li:nth-child(4) {
+  animation: animaTech2 1s forwards;
+  animation-delay: 1.2s;
+}
+.scroll-ativo .animaTech1 li:nth-child(5) {
+  animation: animaTech2 1s forwards;
+  animation-delay: 1.4s;
+}
+.scroll-ativo .animaTech2 li:nth-child(1) {
+  animation: animaTech2 1s forwards;
+  animation-delay: 1.6s;
+}
+.scroll-ativo .animaTech2 li:nth-child(2) {
+  animation: animaTech2 1s forwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes animaTech2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0.3;
+    top: 0;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 @media (max-width: 1280px) {
@@ -255,4 +378,16 @@
   .techs li {
     max-width: 80px;
   }
+}
+
+.js-scroll {
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(100px);
+}
+
+.js-scroll.scroll-ativo {
+  opacity: 1;
+  transition: 2s;
+  transform: translateY(0);
 }
