@@ -1,0 +1,40 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.menu-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-item::after {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background-color: var(--c3);
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu-item:hover:after {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 76px;
+  }
+
+  .menu-lista {
+    gap: 16px;
+  }
+} ;

@@ -76,58 +76,95 @@
                 <p class="texto-conhecimentos  js-scroll">Algumas tecnologias que conheço ou ainda vou
                     estudar.
                 </p>
-                <div class="js-scroll">
-                    <div class="estudado">
-                        <h3 class="estudado-titulo">Eu conheço</h3>
-                        <div class="icones-tech">
-                            <ul class="techs animaTech1">
-                                <li><img src="./imagens/html.svg" alt=""></li>
-                                <li><img src="./imagens/css.svg" alt=""></li>
-                                <li><img src="./imagens/js.svg" alt=""></li>
-                                <li><img src="./imagens/git.svg" alt=""></li>
-                                <li><img src="./imagens/ghub.svg" alt=""></li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="nao-estudado">
-                        <h3 class="estudado-titulo">Proximas a aprender</h3>
-                        <div class="icones-tech ">
-                            <ul class="techs animaTech2">
-                                <li><img src="./imagens/react.svg" alt=""></li>
-                                <li><img src="./imagens/vue.svg" alt=""></li>
-                            </ul>
-                        </div>
+                <div class="estudado js-scroll">
+                    <h3 class="titulo2">Eu conheço</h3>
+                    <div class="icones-tech">
+                        <ul class="techs animaTech1">
+                            <li><img src="./imagens/html.svg" alt=""></li>
+                            <li><img src="./imagens/css.svg" alt=""></li>
+                            <li><img src="./imagens/js.svg" alt=""></li>
+                            <li><img src="./imagens/git.svg" alt=""></li>
+                            <li><img src="./imagens/ghub.svg" alt=""></li>
+                        </ul>
                     </div>
                 </div>
+
+                <div class="nao-estudado js-scroll">
+                    <h3 class="titulo2">Proximas a aprender</h3>
+                    <div class="icones-tech ">
+                        <ul class="techs animaTech2">
+                            <li><img src="./imagens/react.svg" alt=""></li>
+                            <li><img src="./imagens/vue.svg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <section id="projetos">
         <div class="container">
-            <h2 class="titulo js-scroll">Projetos</h2>
-            <p class="texto js-scroll">Alguns projetos que eu faço para praticar minhas habilidades.</p>
+            <h2 class="titulo  js-scroll">Projetos</h2>
+            <p class="texto  js-scroll">Alguns projetos que eu faço para praticar minhas habilidades.</p>
             <div class="projetos-conteudo js-scroll">
-                <div class="grid-projetos ">
+                <div class="grid-projetos">
                     <div class="img-projeto">
-                        <a href="#"><img src="./imagens/projetos/projeto1.jpg" alt=""></a>
+                        <a href="./projetos/dezign-portfolio/index.html" target="_blank"><img
+                                src="./imagens/projetos/projeto1.jpg" alt=""></a>
                     </div>
                     <div class="img-projeto">
-                        <a href="#"><img src="./imagens/projetos/projeto2.jpg" alt="">
+                        <a href="./projetos/santeras/index.html" target="_blank"><img
+                                src="./imagens/projetos/projeto2.jpg" alt="">
                     </div></a>
                     <div class="img-projeto">
-                        <a href="#"><img src="./imagens/projetos/projeto3.jpg" alt=""></a>
+                        <a href="./projetos/union-agency/index.html" target="_blank"><img
+                                src="./imagens/projetos/projeto3.jpg" alt=""></a>
                     </div>
                 </div>
-                <a href="#" class="link-projetos ">Ver todos</a>
+                <!-- <a href="#" class="link-projetos">Ver todos</a> -->
             </div>
         </div>
     </section>
 
 
+    <section id="contato">
+        <div class="container">
 
-    <div class="scroll"></div>
+
+            <div class="contato-container">
+                <div class="titulo-contato">
+                    <h2 class="js-scroll">Contato</h2>
+                    <h3 class="titulo2 js-scroll">Vamos<br>Conversar</h3>
+                </div>
+                <form action="./" method="" class="formulario js-scroll">
+                    <div class="input-wraper">
+                        <label for="nome">Nome</label>
+                        <input type="text" placeholder="Nome" id="nome" name="nome" required>
+                    </div>
+                    <div class="input-wraper">
+                        <label for="email">E-mail</label>
+                        <input type="text" placeholder="E-Mail" id="email" name="email" required>
+                    </div>
+                    <div class="input-wraper">
+                        <label for="mensagem">mensagem</label>
+                        <textarea name="mensagem" id="mensag" rows="7" placeholder="Como posso ajudar?"></textarea>
+                    </div>
+
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Dsenvolvido por JuniorDEV</p>
+    </footer>
+
+
+
+
     <script src="./js/script.js"></script>
 </body>
 

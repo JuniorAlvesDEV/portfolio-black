@@ -10,19 +10,20 @@ function menuMobile() {
 }
 menuMobile();
 
-const jsScroll = document.querySelectorAll(".js-scroll");
+function scrollAnimado() {
+  const jsScroll = document.querySelectorAll(".js-scroll");
 
-function animaScroll() {
-  jsScroll.forEach((sessao) => {
-    const tela = window.innerHeight * 0.7;
-    const sessaoTop = sessao.getBoundingClientRect().top - tela;
+  function animaScroll() {
+    jsScroll.forEach((sessao) => {
+      const tela = window.innerHeight * 0.7;
+      const sessaoTop = sessao.getBoundingClientRect().top - tela;
 
-    if (sessaoTop < 0) {
-      sessao.classList.add("scroll-ativo");
-    } else {
-      sessao.classList.remove("scroll-ativo");
-    }
-  });
+      if (sessaoTop < 0) {
+        sessao.classList.add("scroll-ativo");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", animaScroll);
 }
-
-window.addEventListener("scroll", animaScroll);
+scrollAnimado();

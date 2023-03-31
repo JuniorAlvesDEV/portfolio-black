@@ -1,0 +1,249 @@
+:root {
+  --c1: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
+
+  --c2: #000000;
+
+  --c3: #e3e4e6;
+
+  --c4: rgba(227, 228, 230, 0.8);
+}
+
+body {
+  background: var(--c2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  display: block;
+}
+
+.container-geral {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1000px) {
+  .container-geral {
+    padding: 0 16px;
+  }
+}
+
+footer {
+  padding: 40px;
+}
+
+footer p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////// FONT LIGHT */
+
+.h1-light {
+  font: 300 56px/1.5 "Work Sans", sans-serif;
+  letter-spacing: -0.02em;
+  color: var(--c4);
+}
+
+.h2-light {
+  font: 300 40px/1.5 "Work Sans", sans-serif;
+  color: var(--c4);
+}
+
+.h3-light {
+  font: 300 32px/1.5 "Work Sans", sans-serif;
+  color: var(--c4);
+}
+
+.h4-light {
+  font: 300 24px/1.5 "Work Sans", sans-serif;
+  color: var(--c4);
+}
+
+.h5-light {
+  font: 300 16px/1.5 "Work Sans", sans-serif;
+  color: var(--c4);
+}
+
+.body-light {
+  font: 300 18px/1.5 "Work Sans", sans-serif;
+  color: var(--c4);
+}
+
+.button-light {
+  color: var(--c4);
+  font: 300 16px/1.5 "Work Sans", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .h1-light {
+    font: 300 32px/1.5 "Work Sans", sans-serif;
+  }
+
+  .h2-light {
+    font: 300 24px/1.5 "Work Sans", sans-serif;
+  }
+
+  .h3-light {
+    font: 300 20px/1.5 "Work Sans", sans-serif;
+  }
+
+  .h4-light {
+    font: 300 18px/1.5 "Work Sans", sans-serif;
+  }
+
+  .h5-light {
+    font: 300 16px/1.5 "Work Sans", sans-serif;
+  }
+
+  .body-light {
+    font: 300 18px/1.5 "Work Sans", sans-serif;
+  }
+
+  .button-light {
+    font: 300 16px/1.5 "Work Sans", sans-serif;
+  }
+}
+
+/*/ /////////////////////////////////////////////////////////////////////////////// FONT SEMIBOLD */
+
+.h1-semibold {
+  font: 600 56px/1.5 "Work Sans", sans-serif;
+  letter-spacing: -0.02em;
+  color: var(--c3);
+}
+
+.h2-semibold {
+  font: 600 40px/1.5 "Work Sans", sans-serif;
+  color: var(--c3);
+}
+
+.h3-semibold {
+  font: 600 32px/1.5 "Work Sans", sans-serif;
+  color: var(--c3);
+}
+
+.h4-semibold {
+  font: 600 24px/1.5 "Work Sans", sans-serif;
+  color: var(--c3);
+}
+
+.h5-semibold {
+  font: 600 16px/1.5 "Work Sans", sans-serif;
+  color: var(--c3);
+}
+
+.body-semibold {
+  font: 600 18px/1.5 "Work Sans", sans-serif;
+  color: var(--c3);
+}
+
+.button-semibold {
+  font: 600 16px/1.5 "Work Sans", sans-serif;
+  color: var(--c3);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.label {
+  font: 600 14px/1.5 "Work Sans", sans-serif;
+  color: var(--c3);
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .h1-semibold {
+    font: 600 32px/1.5 "Work Sans", sans-serif;
+  }
+
+  .h2-semibold {
+    font: 600 24px/1.5 "Work Sans", sans-serif;
+  }
+
+  .h3-semibold {
+    font: 600 20px/1.5 "Work Sans", sans-serif;
+  }
+
+  .h4-semibold {
+    font: 600 18px/1.5 "Work Sans", sans-serif;
+  }
+
+  .h5-semibold {
+    font: 600 16px/1.5 "Work Sans", sans-serif;
+  }
+
+  .body-semibold {
+    font: 600 18px/1.5 "Work Sans", sans-serif;
+  }
+
+  .button-semibold {
+    font: 600 16px/1.5 "Work Sans", sans-serif;
+  }
+
+  .label {
+    font: 600 14px/1.5 "Work Sans", sans-serif;
+  }
+}
+
+/*//////////////////////////////////////////////////////////////////////////////// BUTTON */
+
+.button {
+  display: block;
+  color: var(--c3);
+  text-decoration: none;
+  font: 300 16px/1.5 "Work Sans", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 2px solid var(--c4);
+  border-radius: 100px;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: linear 0.5s;
+}
+
+.button::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../assets/icones/seta-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  display: inline-block;
+  transition: linear 0.5s;
+}
+
+.button:hover {
+  font: 600 16px/1.5 "Work Sans", sans-serif;
+  padding: 8px 28px;
+  background: var(--c1);
+}
+
+.button:hover::after {
+  content: "";
+
+  background-image: url(../assets/icones/seta-2.svg);
+}

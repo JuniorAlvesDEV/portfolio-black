@@ -1,0 +1,18 @@
+.text-clients {
+  padding: 80px 0;
+}
+
+.clients-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 130px;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .clients-logos {
+    justify-content: center;
+  }
+}
