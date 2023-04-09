@@ -2,23 +2,42 @@
 <html lang="pt-br">
 
 <head>
+    <!---------------------------------------------------------------------------------------------------- META DADOS -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JuniorDEV - Desenvolvedor Front-end">
+    <meta property="og:description" content="Desenvolvimento de websites que melhor atendem às suas necessidades">
+    <meta property="og:url" content="https://juniordev.com.br/">
+    <meta property="og:image" content="https://juniordev.com.br/imagens/og-image.jpg">
+    <!--GOOGLE-->
+    <meta name="autor" content="https://juniordev.com.br">
+    <meta name="company" content="JuniorDEV">
+    <meta name="title'" content="JuniorDEV - Desenvolvedor Front-end">
+    <meta name="image'" content="https://juniordev.com.br/imagens/og-image.jpg">
+    <meta name="description" content="Desenvolvimento de websites que melhor atendem às suas necessidades">
+    <meta name="keywords'"
+        content="JuniorDEV, desenvolvimento web, desenvolvedor front-end, desenvolvedor portfolio, programador, programador junior, programador senior, programador pleno">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="revisit-after" content="1">
+    <link rel="canonical" href="https://juniordev.com.br/">
+    <!---------------------------------------------------------------------------------------------------- META DADOS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
     <title>JuniorDEV - Desenvolvedor Front-end</title>
+    <script src="https://kit.fontawesome.com/4fe447c46c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <nav class="menu-bar">
-        <a href="./index.html" class="logo"><img src="./imagens/logo.svg" alt="JuniorDEV"></a>
-
+    <nav class="menu-bar" id="top">
+        <a href="#top" class="logo"><img src="./imagens/logo.svg" alt="JuniorDEV"></a>
         <div class="menu-itens">
             <ul class="menu-lista">
-                <li><a class="item" href="#sobre">Sobre</a></li>
-                <li><a class="item" href="#projetos">Projetos</a></li>
-                <li><a class="btn-contato" href="#contato">Contato</a></li>
+                <li><a class="item js-seletor" href="#sobre">Sobre</a></li>
+                <li><a class="item js-seletor" href="#projetos">Projetos</a></li>
+                <li><a class="btn-contato js-seletor" href="#contato">Contato</a></li>
             </ul>
             <div class="hamburguer">
                 <li class="l1"></li>
@@ -27,10 +46,8 @@
             </div>
         </div>
     </nav>
-
     <header class="intro">
         <div class="marca-intro">
-
             <div class="nome-intro">
                 <h1>
                     <span class="linha font">J</span>
@@ -49,9 +66,7 @@
             </div>
         </div>
     </header>
-
     <section id="sobre">
-
         <div class="container">
             <h2 class="titulo js-scroll">Sobre</h2>
             <p class="texto js-scroll">Olá! Meu nome é Junior e gosto de criar coisas na internet. Meu interesse
@@ -61,7 +76,6 @@
                 Atualmente, meu foco principal é criar projetos novos e aprender novas linguagens para evoluir na área.
             </p>
         </div>
-
         <div class="img-sobre  js-scroll">
             <img src="./imagens/header_banner.jpg" alt="">
             <div class="nome-foto">
@@ -69,41 +83,44 @@
                 <span class="profissao">Desenvolvedor Front-end</span>
             </div>
         </div>
-
         <div class="container">
             <div class="conhecimentos">
                 <h2 class="titulo-conhecimentos js-scroll">Conhecimentos</h2>
                 <p class="texto-conhecimentos  js-scroll">Algumas tecnologias que conheço ou ainda vou
                     estudar.
                 </p>
-
                 <div class="estudado js-scroll">
                     <h3 class="titulo2">Eu conheço</h3>
                     <div class="icones-tech">
                         <ul class="techs animaTech1">
-                            <li><img src="./imagens/html.svg" alt=""></li>
-                            <li><img src="./imagens/css.svg" alt=""></li>
-                            <li><img src="./imagens/js.svg" alt=""></li>
-                            <li><img src="./imagens/git.svg" alt=""></li>
-                            <li><img src="./imagens/ghub.svg" alt=""></li>
+                            <li> <span class="tech-nome">HTML</span> <img src="./imagens/html.svg" alt="html"
+                                    width="150"></li>
+                            <li><span class="tech-nome">CSS</span> <img src="./imagens/css.svg" alt="css" width="150">
+                            </li>
+                            <li><span class="tech-nome">JavaScript</span> <img src="./imagens/js.svg" alt="JavaScript"
+                                    width="150">
+                            </li>
+                            <li><span class="tech-nome">Git</span> <img src="./imagens/git.svg" alt="git" width="150">
+                            </li>
+                            <li><span class="tech-nome">Git Hub</span> <img src="./imagens/ghub.svg" alt="git hub"
+                                    width="150"></li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="nao-estudado js-scroll">
                     <h3 class="titulo2">Proximas a aprender</h3>
                     <div class="icones-tech ">
                         <ul class="techs animaTech2">
-                            <li><img src="./imagens/react.svg" alt=""></li>
-                            <li><img src="./imagens/vue.svg" alt=""></li>
+                            <li><span class="tech-nome">React</span> <img src="./imagens/react.svg" alt="react"
+                                    width="150"></li>
+                            <li><span class="tech-nome">Vue</span> <img src="./imagens/vue.svg" alt="react" width="150">
+                            </li>
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
     <section id="projetos">
         <div class="container">
             <h2 class="titulo  js-scroll">Projetos</h2>
@@ -112,59 +129,59 @@
                 <div class="grid-projetos">
                     <div class="img-projeto">
                         <a href="./projetos/dezign-portfolio/index.html" target="_blank"><img
-                                src="./imagens/projetos/projeto1.jpg" alt=""></a>
+                                src="./imagens/projetos/projeto1.jpg" alt="projeto dezign portfolio"></a>
                     </div>
                     <div class="img-projeto">
                         <a href="./projetos/santeras/index.html" target="_blank"><img
-                                src="./imagens/projetos/projeto2.jpg" alt="">
+                                src="./imagens/projetos/projeto2.jpg" alt="projeto santeras">
                     </div></a>
                     <div class="img-projeto">
                         <a href="./projetos/union-agency/index.html" target="_blank"><img
-                                src="./imagens/projetos/projeto3.jpg" alt=""></a>
+                                src="./imagens/projetos/projeto3.jpg" alt="projeto union agency"></a>
                     </div>
                 </div>
-                <!-- <a href="#" class="link-projetos">Ver todos</a> -->
+
             </div>
         </div>
     </section>
-
-
     <section id="contato">
         <div class="container">
-
-
             <div class="contato-container">
                 <div class="titulo-contato">
                     <h2 class="js-scroll">Contato</h2>
                     <h3 class="titulo2 js-scroll">Vamos<br>Conversar</h3>
+                    <ul class="midias-sociais js-scroll">
+                        <li><a href="https://www.linkedin.com/in/gilberto-junior-703204271/" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in icone"></i></a></li>
+                        <li><a href="mailto:contato@juniordev.com.br"><i
+                                    class="fa-regular fa-envelope icone"></i></i></a></li>
+                        <li><a href="https://wa.me/+55041998781629" target="_blank"><i
+                                    class="fa-brands fa-whatsapp icone"></i></i></a></li>
+
+                    </ul>
                 </div>
                 <form action="./" method="" class="formulario js-scroll">
                     <div class="input-wraper">
                         <label for="nome">Nome</label>
-                        <input type="text" placeholder="Nome" id="nome" name="nome" required>
+                        <input type="text" placeholder="Nome" id="nome" name="nome" required disabled>
                     </div>
                     <div class="input-wraper">
                         <label for="email">E-mail</label>
-                        <input type="text" placeholder="E-Mail" id="email" name="email" required>
+                        <input type="text" placeholder="E-Mail" id="email" name="email" required disabled>
                     </div>
                     <div class="input-wraper">
-                        <label for="mensagem">mensagem</label>
-                        <textarea name="mensagem" id="mensag" rows="7" placeholder="Como posso ajudar?"></textarea>
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" id="mensag" rows="7" placeholder="Como posso ajudar?"
+                            disabled></textarea>
                     </div>
-
                     <button>Enviar</button>
                 </form>
             </div>
         </div>
     </section>
-
     <footer>
-        <p>Dsenvolvido por JuniorDEV</p>
+        <p>Desenvolvido por JuniorDEV</p>
     </footer>
-
-
-
-
     <script src="./js/script.js"></script>
 </body>
 

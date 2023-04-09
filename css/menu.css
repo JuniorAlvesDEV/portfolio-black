@@ -1,6 +1,6 @@
 .menu-bar {
   padding: 16px 32px;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #aaaaaa;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -10,7 +10,7 @@
 }
 
 .logo {
-  max-width: 200px;
+  width: 200px;
 }
 
 .logo img {
@@ -48,7 +48,7 @@
   background-color: #ffffff;
   height: 1px;
   width: 0%;
-  transition: linear 0.5s;
+  transition: linear 0.3s;
 }
 
 .menu-lista .item:hover::after,
@@ -69,6 +69,10 @@
 }
 
 @media (max-width: 768px) {
+  .logo {
+    width: 100px;
+  }
+
   .abrir-menu .menu-bar {
     border: none;
   }

@@ -42,8 +42,25 @@ img {
   height: 1000px;
 }
 
+footer {
+  padding: 16px 32px;
+  color: #aaaaaa;
+}
+
 @media (max-width: 1600px) {
   .container {
     padding: 0 16px;
   }
+}
+
+.js-scroll {
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(100px);
+}
+
+.js-scroll.scroll-ativo {
+  opacity: 1;
+  transition: 2s;
+  transform: translateY(0);
 }
