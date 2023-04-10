@@ -2,51 +2,22 @@
   margin-bottom: 256px;
 }
 .grid-projetos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+
   gap: 16px;
   margin-bottom: 32px;
 }
 .img-projeto {
   transition: 0.5s;
-}
-
-.img-projeto:hover {
-  box-shadow: 0px 0px 200px #000000;
-}
-
-.img-projeto:nth-child(1) {
-  grid-column: 1/-1;
-}
-
-.link-projetos {
-  font-size: 1.5rem;
-  color: #aaaaaa;
-  text-align: center;
   display: block;
-  max-width: max-content;
-  margin: 0 auto;
 }
 
-.link-projetos::after {
-  content: "";
-  display: block;
-  background-color: #ffffff;
-  height: 1px;
-  width: 0%;
-  transition: linear 0.5s;
-}
-
-.link-projetos:hover:after {
-  width: 100%;
+.img-ativa {
+  flex-flow: 2;
 }
 
 @media (max-width: 768px) {
   #projetos {
     margin-bottom: 128px;
-  }
-
-  .link-projetos {
-    font-size: 0.8rem;
   }
 }
