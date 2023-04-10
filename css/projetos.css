@@ -1,19 +1,31 @@
 #projetos {
   margin-bottom: 256px;
 }
-.grid-projetos {
+
+.slide-wrapper {
+  overflow: hidden;
+}
+
+.slide {
   display: flex;
-
-  gap: 16px;
-  margin-bottom: 32px;
 }
-.img-projeto {
+
+.slide:hover {
+  will-change: transform;
+}
+
+.slide li {
+  width: 80vw;
+  flex-shrink: 0;
+  max-width: 1000px;
+  margin: 0 16px;
+  opacity: 0.5;
+  transform: scale(0.9);
   transition: 0.5s;
-  display: block;
 }
-
-.img-ativa {
-  flex-flow: 2;
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media (max-width: 768px) {

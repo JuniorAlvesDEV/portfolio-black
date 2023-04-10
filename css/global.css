@@ -21,6 +21,7 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 .bg {
   position: absolute;
@@ -36,10 +37,6 @@ img {
 .container {
   max-width: 1600px;
   margin: 0 auto;
-}
-
-.scroll {
-  height: 1000px;
 }
 
 footer {
