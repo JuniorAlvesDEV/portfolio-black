@@ -28,6 +28,10 @@
   margin-bottom: 128px;
 }
 
+.formulario {
+  margin-bottom: 128px;
+}
+
 .contato-container input,
 textarea {
   width: 100%;
@@ -58,7 +62,6 @@ textarea:hover {
   font-weight: 500;
   letter-spacing: 0.1em;
   transition: 0.2s;
-  margin-bottom: 128px;
 }
 
 .contato-container button:hover {
@@ -76,6 +79,19 @@ textarea:hover {
 .icone {
   font-size: 5rem;
   color: #aaaaaa;
+}
+
+.formulario.envio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-form {
+  color: #aaaaaa;
+  font-size: 3rem;
+  font-weight: 500;
+  padding: 0 32px;
 }
 
 @media (max-width: 1280px) {
@@ -102,5 +118,8 @@ textarea:hover {
   .icone {
     font-size: 3rem;
     color: #aaaaaa;
+  }
+  .texto-form {
+    font-size: 2rem;
   }
 }

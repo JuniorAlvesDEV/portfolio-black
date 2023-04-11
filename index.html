@@ -132,12 +132,23 @@
             <div class="slide-wrapper">
                 <ul class="slide">
                     <li>
-                        <a href="./projetos/dezign-portfolio/index.html" target="_blank">
-                            <img src="./imagens/projetos/projeto1.jpg" alt="projeto dezign portfolio">
+                        <img src="./imagens/projetos/projeto1.jpg" alt="projeto dezign portfolio">
+                        <a href="./projetos/dezign-portfolio/index.html" class="link-externo ativo" target="_blank">Ver
+                            projeto
                         </a>
                     </li>
-                    <li><img src="./imagens/projetos/projeto2.jpg" alt="projeto santeras"></li>
-                    <li><img src="./imagens/projetos/projeto3.jpg" alt="projeto union agency"></li>
+                    <li>
+                        <img src="./imagens/projetos/projeto2.jpg" alt="projeto santeras">
+                        <a href="./projetos/santeras/index.html" class="link-externo" target="_blank">Ver
+                            projeto
+                        </a>
+                    </li>
+                    <li>
+                        <img src="./imagens/projetos/projeto3.jpg" alt="projeto union agency">
+                        <a href="./projetos/union-agency/index.html" class="link-externo" target="_blank">Ver
+                            projeto
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -159,19 +170,18 @@
 
                     </ul>
                 </div>
-                <form action="./" method="" class="formulario js-scroll">
+                <form action="./enviar.php" method="post" class="formulario js-scroll">
                     <div class="input-wraper">
                         <label for="nome">Nome</label>
-                        <input type="text" placeholder="Nome" id="nome" name="nome" required disabled>
+                        <input type="text" placeholder="Nome" id="nome" name="nome" required>
                     </div>
                     <div class="input-wraper">
                         <label for="email">E-mail</label>
-                        <input type="text" placeholder="E-Mail" id="email" name="email" required disabled>
+                        <input type="text" placeholder="E-Mail" id="email" name="email" required>
                     </div>
                     <div class="input-wraper">
                         <label for="mensagem">Mensagem</label>
-                        <textarea name="mensagem" id="mensag" rows="7" placeholder="Como posso ajudar?"
-                            disabled></textarea>
+                        <textarea name="mensagem" id="mensagem" rows="7" placeholder="Como posso ajudar?"></textarea>
                     </div>
                     <button>Enviar</button>
                 </form>
