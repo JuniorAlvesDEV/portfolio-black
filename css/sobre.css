@@ -1,10 +1,9 @@
-#sobre,
-#projetos {
+#sobre {
   margin-bottom: 256px;
 }
 
 .titulo {
-  color: #aaaaaa;
+  color: #ffffff;
   font-size: 10rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -26,7 +25,7 @@
 }
 
 .nome-foto {
-  color: #aaaaaa;
+  color: #ffffff;
   position: absolute;
   bottom: 10%;
   left: 10%;
@@ -47,201 +46,6 @@
   letter-spacing: 0.05em;
 }
 
-.titulo-conhecimentos {
-  color: #aaaaaa;
-  font-size: 7rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.texto-conhecimentos {
-  color: #aaaaaa;
-  font-size: 3rem;
-  margin-bottom: 128px;
-}
-
-.estudado {
-  margin-bottom: 128px;
-}
-
-.titulo2 {
-  font-size: 4rem;
-  color: #aaaaaa;
-  font-weight: 400;
-  margin-bottom: 32px;
-}
-
-.techs {
-  display: flex;
-  gap: 128px;
-  flex-wrap: wrap;
-}
-
-.techs li {
-  max-width: 150px;
-  position: relative;
-}
-
-.tech-nome {
-  color: #ffffff;
-  font-size: 2rem;
-  width: max-content;
-  position: absolute;
-  bottom: -10%;
-  z-index: 2;
-  padding: 10px 20px;
-  background-color: black;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0 0 20px #000000;
-  opacity: 0;
-  left: 50%;
-  display: none;
-}
-
-.tech-nome.ativo {
-  display: block;
-  opacity: 1;
-  animation: animaTag 0.5s forwards;
-}
-
-@keyframes animaTag {
-  from {
-    opacity: 0;
-    transform: translate(-50%, 20%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0%);
-  }
-}
-
-.techs img {
-  object-fit: contain;
-  position: relative;
-}
-
-.animaTech1 li::before,
-.animaTech2 li::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #5c43d2;
-  bottom: -10%;
-  transform: perspective(1em) rotateX(45deg);
-  filter: blur(6px);
-  opacity: 0;
-}
-
-.techs li:hover::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #5c43d2;
-  bottom: -10%;
-  transform: perspective(1em) rotateX(45deg);
-  filter: blur(6px);
-  opacity: 1;
-}
-
-.scroll-ativo .animaTech1 li:nth-child(1)::before {
-  animation: animaTech3 1s;
-  animation-delay: 2s;
-}
-.scroll-ativo .animaTech1 li:nth-child(2)::before {
-  animation: animaTech3 1s;
-  animation-delay: 2.2s;
-}
-.scroll-ativo .animaTech1 li:nth-child(3)::before {
-  animation: animaTech3 1s;
-  animation-delay: 2.4s;
-}
-.scroll-ativo .animaTech1 li:nth-child(4)::before {
-  animation: animaTech3 1s;
-  animation-delay: 2.6s;
-}
-.scroll-ativo .animaTech1 li:nth-child(5)::before {
-  animation: animaTech3 1s;
-  animation-delay: 2.8s;
-}
-.scroll-ativo .animaTech2 li:nth-child(1)::before {
-  animation: animaTech3 1s;
-  animation-delay: 3s;
-}
-.scroll-ativo .animaTech2 li:nth-child(2)::before {
-  animation: animaTech3 1s;
-  animation-delay: 3.2s;
-}
-
-@keyframes animaTech3 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.animaTech1 li,
-.animaTech2 li {
-  opacity: 0;
-}
-
-.scroll-ativo .animaTech1 li:nth-child(1) {
-  animation: animaTech2 1s forwards;
-  animation-delay: 0.6s;
-}
-.scroll-ativo .animaTech1 li:nth-child(2) {
-  animation: animaTech2 1s forwards;
-  animation-delay: 0.8s;
-}
-.scroll-ativo .animaTech1 li:nth-child(3) {
-  animation: animaTech2 1s forwards;
-  animation-delay: 1s;
-}
-.scroll-ativo .animaTech1 li:nth-child(4) {
-  animation: animaTech2 1s forwards;
-  animation-delay: 1.2s;
-}
-.scroll-ativo .animaTech1 li:nth-child(5) {
-  animation: animaTech2 1s forwards;
-  animation-delay: 1.4s;
-}
-.scroll-ativo .animaTech2 li:nth-child(1) {
-  animation: animaTech2 1s forwards;
-  animation-delay: 1.6s;
-}
-.scroll-ativo .animaTech2 li:nth-child(2) {
-  animation: animaTech2 1s forwards;
-  animation-delay: 1.8s;
-}
-@keyframes animaTech2 {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  50% {
-    opacity: 0.3;
-    top: 0;
-    transform: translateY(-10%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
 @media (max-width: 1280px) {
   .titulo {
     font-size: 7rem;
@@ -249,20 +53,6 @@
 
   .texto {
     font-size: 2rem;
-  }
-
-  .titulo-conhecimentos {
-    font-size: 5rem;
-  }
-
-  .texto-conhecimentos {
-    font-size: 2rem;
-  }
-
-  .techs {
-    gap: 64px;
-    align-items: center;
-    justify-content: center;
   }
 }
 
@@ -292,35 +82,5 @@
   .profissao {
     letter-spacing: 0.05em;
     font-size: 0.5rem;
-  }
-
-  .titulo-conhecimentos {
-    font-size: 2rem;
-  }
-
-  .texto-conhecimentos {
-    font-size: 1rem;
-    margin-bottom: 64px;
-  }
-  .estudado {
-    margin-bottom: 64px;
-  }
-  .titulo2 {
-    font-size: 2rem;
-  }
-
-  .techs {
-    gap: 32px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .techs li {
-    max-width: 50px;
-  }
-
-  .tech-nome {
-    font-size: 1rem;
-    padding: 5px 10px;
   }
 }

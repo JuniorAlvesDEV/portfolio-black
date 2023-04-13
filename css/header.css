@@ -10,6 +10,19 @@
   height: max-content;
 }
 
+.font {
+  font-family: "clash";
+  font-weight: 500;
+  font-size: 14.5vw;
+  color: #ffffff;
+  opacity: 0;
+}
+
+.linha {
+  -webkit-text-stroke: 1px #aaaaaa;
+  color: transparent;
+}
+
 .nome-intro h2 {
   color: #aaaaaa;
   font-family: "clash";
@@ -27,19 +40,6 @@
   to {
     opacity: 1;
   }
-}
-
-.font {
-  font-family: "clash";
-  font-weight: 500;
-  font-size: 14.5vw;
-  color: #aaaaaa;
-  opacity: 0;
-}
-
-.linha {
-  -webkit-text-stroke: 1px #aaaaaa;
-  color: transparent;
 }
 
 .font:nth-child(1) {

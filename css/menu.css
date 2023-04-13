@@ -1,5 +1,5 @@
 .menu-bar {
-  padding: 16px 32px;
+  padding: 20px 40px;
   border-bottom: 1px solid #aaaaaa;
   display: flex;
   width: 100%;
@@ -7,6 +7,7 @@
   background-image: url(../imagens/bg-menu.jpg);
   position: fixed;
   z-index: 5 !important;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -73,9 +74,37 @@
     width: 100px;
   }
 
+  .menu-bar {
+    gap: 0;
+    padding: 16px;
+  }
+
   .abrir-menu .menu-bar {
     border: none;
+    box-sizing: border-box;
   }
+
+  .menu-lista li {
+    width: 100%;
+  }
+  .menu-lista .item {
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+    padding: 16px 0;
+  }
+
+  .menu-lista .item:hover::after,
+  .menu-lista .item:focus::after {
+    width: 0%;
+  }
+
+  .btn-contato {
+    margin-top: 32px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
   .hamburguer {
     display: flex;
     flex-direction: column;
@@ -83,7 +112,6 @@
     align-items: end;
     cursor: pointer;
     transition: 0.3s;
-    position: relative;
   }
   .l1 {
     height: 1px;
@@ -118,9 +146,7 @@
     position: absolute;
     top: 50%;
   }
-  .menu-bar {
-    padding: 16px;
-  }
+
   .menu-lista {
     display: none;
   }
@@ -130,7 +156,6 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: 50px;
     background-image: url(../imagens/bg.jpg);
     padding: 16px;
     align-items: start;
@@ -138,6 +163,7 @@
     border-bottom: 1px solid #ffffff;
     animation: animaMenu 0.5s forwards;
     z-index: 1 !important;
+    box-sizing: border-box;
   }
 
   @keyframes animaMenu {
@@ -148,30 +174,9 @@
     }
 
     to {
-      top: 50px;
+      top: 40px;
       max-height: 6000px;
       opacity: 1;
     }
-  }
-
-  .menu-lista li {
-    width: 100%;
-  }
-  .menu-lista .item {
-    text-align: left;
-    border-bottom: 1px solid #ffffff;
-    padding: 16px 0;
-  }
-
-  .menu-lista .item:hover::after,
-  .menu-lista .item:focus::after {
-    width: 0%;
-  }
-
-  .btn-contato {
-    margin-top: 32px;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
   }
 }

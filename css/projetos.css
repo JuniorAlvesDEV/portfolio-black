@@ -4,6 +4,7 @@
 
 .slide-wrapper {
   overflow: hidden;
+  height: max-content;
 }
 
 .slide {
@@ -17,48 +18,91 @@
 .slide li {
   width: 80vw;
   flex-shrink: 0;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 16px;
   opacity: 0.5;
   transform: scale(0.9);
   transition: 0.5s;
   position: relative;
+  height: max-content;
 }
 .slide li.active {
   opacity: 1;
   transform: scale(1);
 }
 
-.link-externo {
+.info-projeto {
+  margin-top: 16px;
   opacity: 0;
-  transition: 0.3s;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5%;
+  transition: 0.5s;
 }
 
-.active .link-externo {
+.active .info-projeto {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.nome-projeto {
+  color: #aaaaaa;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.etiqueta {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  margin-right: 0.5rem;
+}
+
+h3.etiqueta {
+  margin-bottom: 16px;
+}
+
+.tech-projeto {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tech-projeto img {
+  max-width: 40px;
+}
+
+.link-externo {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+  margin: 16px auto 0 auto;
+}
+
+.link-externo {
   background-color: #5c43d2;
   padding: 10px 20px !important;
   border-radius: 5px;
   max-width: max-content;
   color: #ffffff;
   display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5%;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  box-shadow: 0 0 10px #000000;
+  transition: 0.5s;
+  opacity: 0;
+  margin: 16px auto 0 auto;
+}
+
+.active .link-externo {
+  display: block;
   opacity: 1;
+  transition: 0.5s;
+  margin: 16px auto 0 auto;
 }
 
 .link-externo:hover,
 .link-externo:focus {
   background-color: #442eae;
+  margin: 16px auto 0 auto;
 }
 
 @media (max-width: 768px) {

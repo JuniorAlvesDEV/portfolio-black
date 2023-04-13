@@ -79,6 +79,12 @@ textarea:hover {
 .icone {
   font-size: 5rem;
   color: #aaaaaa;
+  transition: 0.3s;
+}
+
+.icone:hover {
+  color: #442eae;
+  transition: 0.3s;
 }
 
 .formulario.envio {
