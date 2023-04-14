@@ -15,7 +15,7 @@
 body {
   background-color: #090909;
   background-image: url(../imagens/bg.jpg);
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 img {
   width: 100%;

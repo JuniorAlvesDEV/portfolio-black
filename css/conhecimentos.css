@@ -203,11 +203,11 @@
   .techs {
     gap: 32px;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
   }
 
-  .techs li {
-    max-width: 50px;
+  .tech {
+    font-size: 20vw;
   }
 
   .tech-nome {
