@@ -1,2 +1,4 @@
 *.php
+*.json
 PHPMailer
+node_modules
