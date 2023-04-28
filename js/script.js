@@ -1,9 +1,9 @@
 import menuMobile from "./menu.js";
 import scrollSuave from "./scrollSuave.js";
 import scrollAnimado from "./scrollAnimado.js";
-import initTooltip from "./tooltips.js";
 import Slide from "./slide.js";
 import formulario from "./formulario.js";
+import initTooltip from "./tooltips.js";
 
 menuMobile();
 scrollSuave();
