@@ -32,15 +32,29 @@
   flex-wrap: wrap;
 }
 
+:root {
+  --html: #505050;
+  --css: #505050;
+  --js: #505050;
+  --git: #505050;
+  --github: #505050;
+  --react: #505050;
+  --vue: #505050;
+}
+
 .tech {
-  font-size: 10vw;
-  color: #aaaaaa;
-  position: relative;
+  width: 7vw;
+  height: max-content;
 }
 
 .tech:hover {
-  color: #5c43d2;
-  text-shadow: 0 0 10px #5c43d2;
+  --html: #e54c21;
+  --css: #1572b6;
+  --js: #efd81d;
+  --git: #e84d31;
+  --github: #ffffff;
+  --react: #5ed3f3;
+  --vue: #3fb27f;
 }
 
 .animaTech1 li::before,
@@ -51,7 +65,6 @@
   width: 100%;
   height: 15px;
   border-radius: 50%;
-  background-color: #5c43d2;
   bottom: -10%;
   transform: perspective(1em) rotateX(45deg);
   filter: blur(6px);
@@ -65,40 +78,62 @@
   width: 100%;
   height: 15px;
   border-radius: 50%;
-  background-color: #5c43d2;
   bottom: -10%;
   transform: perspective(1em) rotateX(45deg);
   filter: blur(6px);
   opacity: 1;
 }
 
+.scroll-ativo .animaTech1 li:nth-child(1):hover::before,
+.scroll-ativo .animaTech1 li:nth-child(2):hover::before,
+.scroll-ativo .animaTech1 li:nth-child(3):hover::before,
+.scroll-ativo .animaTech1 li:nth-child(4):hover::before,
+.scroll-ativo .animaTech1 li:nth-child(5):hover::before,
+.scroll-ativo .animaTech2 li:nth-child(1):hover::before,
+.scroll-ativo .animaTech2 li:nth-child(2):hover::before {
+  --html: #e54c21;
+  --css: #1572b6;
+  --js: #efd81d;
+  --git: #e84d31;
+  --github: #ffffff;
+  --react: #5ed3f3;
+  --vue: #3fb27f;
+}
+
 .scroll-ativo .animaTech1 li:nth-child(1)::before {
   animation: animaTech3 1s;
   animation-delay: 2s;
+  background-color: var(--html);
 }
 .scroll-ativo .animaTech1 li:nth-child(2)::before {
   animation: animaTech3 1s;
   animation-delay: 2.2s;
+  background-color: var(--css);
 }
 .scroll-ativo .animaTech1 li:nth-child(3)::before {
   animation: animaTech3 1s;
   animation-delay: 2.4s;
+  background-color: var(--js);
 }
 .scroll-ativo .animaTech1 li:nth-child(4)::before {
   animation: animaTech3 1s;
   animation-delay: 2.6s;
+  background-color: var(--git);
 }
 .scroll-ativo .animaTech1 li:nth-child(5)::before {
   animation: animaTech3 1s;
   animation-delay: 2.8s;
+  background-color: var(--github);
 }
 .scroll-ativo .animaTech2 li:nth-child(1)::before {
   animation: animaTech3 1s;
   animation-delay: 3s;
+  background-color: var(--react);
 }
 .scroll-ativo .animaTech2 li:nth-child(2)::before {
   animation: animaTech3 1s;
   animation-delay: 3.2s;
+  background-color: var(--vue);
 }
 
 @keyframes animaTech3 {
@@ -203,7 +238,7 @@
   .techs {
     gap: 32px;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
   }
 
   .tech {
