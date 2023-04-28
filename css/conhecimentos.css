@@ -1,5 +1,6 @@
 #conhecimentos {
-  margin-bottom: 256px;
+  padding-bottom: 256px;
+  overflow: hidden;
 }
 
 .titulo-conhecimentos {
