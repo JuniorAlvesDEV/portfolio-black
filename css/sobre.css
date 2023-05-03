@@ -10,7 +10,7 @@
 }
 
 .texto {
-  color: #aaaaaa;
+  color: #777777;
   font-size: 3rem;
   margin-bottom: 128px;
 }
@@ -18,10 +18,6 @@
 .img-sobre {
   position: relative;
   margin-bottom: 128px;
-}
-
-.img-sobre img {
-  box-shadow: 0px 0px 200px #000000;
 }
 
 .nome-foto {

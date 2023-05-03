@@ -3,6 +3,17 @@
   src: url(../font/ClashDisplay-Variable.ttf);
 }
 
+.dark {
+  --c1: #5c43d2;
+  --c2: #442eae;
+  --txt: #ffffff;
+  --bg: #090909;
+}
+
+.light {
+  --bg: #aaaaaa;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,26 +24,15 @@
 }
 
 body {
-  background-color: #090909;
-  background-image: url(../imagens/bg.jpg);
-  overflow-x: hidden !important;
+  background-color: var(--bg);
 }
+
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-}
-.bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.3;
-  line-height: 0;
-  z-index: 0;
 }
 
 .container {
@@ -47,7 +47,7 @@ footer {
 
 .tooltip {
   position: absolute;
-  z-index: 4;
+  z-index: 1000;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1em 2em;

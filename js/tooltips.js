@@ -2,13 +2,11 @@ export default function initTooltip() {
   const tooltips = document.querySelectorAll("[data-tooltip]");
 
   function onHover() {
-    const tooltipBox = boxTooltip(this);
-    tooltipBox.style.top = `event.pageY + 5 + "px"`;
-    tooltipBox.style.left = `event.pageX + 5 + "px"`;
+    let tooltipBox = boxTooltip(this);
 
     function onMove() {
-      tooltipBox.style.top = `event.pageY + 10 + "px"`;
-      tooltipBox.style.left = `event.pageX + 10 + "px"`;
+      tooltipBox.style.top = event.pageY + 10 + "px";
+      tooltipBox.style.left = event.pageX + 10 + "px";
     }
 
     function onLeave() {
@@ -27,6 +25,7 @@ export default function initTooltip() {
     tooltipBox.classList.add("tooltip");
     tooltipBox.innerText = text;
     document.body.appendChild(tooltipBox);
+
     return tooltipBox;
   }
 

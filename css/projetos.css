@@ -23,7 +23,7 @@
   opacity: 0.5;
   transform: scale(0.9);
   transition: 0.5s;
-  position: relative;
+
   height: max-content;
 }
 .slide li.active {
@@ -31,43 +31,9 @@
   transform: scale(1);
 }
 
-.info-projeto {
-  margin-top: 16px;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.active .info-projeto {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.nome-projeto {
-  color: #aaaaaa;
-  font-weight: 400;
-  margin-bottom: 16px;
-}
-
-.etiqueta {
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 1.2rem;
-  letter-spacing: 0.03em;
-  margin-right: 0.5rem;
-}
-
-h3.etiqueta {
-  margin-bottom: 16px;
-}
-
-.tech-projeto {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
 .tech-projeto img {
   max-width: 40px;
+  position: relative;
 }
 
 .link-externo {

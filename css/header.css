@@ -5,32 +5,24 @@
   align-items: center;
 }
 
-.nome-intro {
-  text-align: center;
-  height: max-content;
-}
-
-.font {
-  font-family: "clash";
-  font-weight: 500;
-  font-size: 14.5vw;
-  color: #ffffff;
-  opacity: 0;
-}
-
 .linha {
-  -webkit-text-stroke: 1px #aaaaaa;
+  -webkit-text-stroke: 1px #ffffff;
   color: transparent;
 }
 
+.cheio {
+  color: #ffffff;
+}
+
 .nome-intro h2 {
-  color: #aaaaaa;
+  color: #ffffff;
   font-family: "clash";
   font-weight: 400;
   font-size: 4vw;
-  animation: animaSub 5s forwards;
-  animation-delay: 2.2s;
+  animation: animaSub 1s forwards;
+  animation-delay: 3s;
   opacity: 0;
+  text-align: center;
 }
 
 @keyframes animaSub {
@@ -42,56 +34,53 @@
   }
 }
 
-.font:nth-child(1) {
+.font {
+  font-family: "clash";
+  font-weight: 500;
+  font-size: 14.5vw;
+  opacity: 0;
   animation: animaIntro 1s forwards;
+}
+
+.font:nth-child(1) {
   animation-delay: 0.4s;
 }
 .font:nth-child(2) {
-  animation: animaIntro 1s forwards;
   animation-delay: 0.6s;
 }
 .font:nth-child(3) {
-  animation: animaIntro 1s forwards;
   animation-delay: 0.8s;
 }
 .font:nth-child(4) {
-  animation: animaIntro 1s forwards;
   animation-delay: 1s;
 }
 .font:nth-child(5) {
-  animation: animaIntro 1s forwards;
   animation-delay: 1.2s;
 }
 .font:nth-child(6) {
-  animation: animaIntro 1s forwards;
   animation-delay: 1.4s;
 }
 .font:nth-child(7) {
-  animation: animaIntro 1s forwards;
   animation-delay: 1.6s;
 }
 .font:nth-child(8) {
-  animation: animaIntro 1s forwards;
   animation-delay: 1.8s;
 }
 .font:nth-child(9) {
-  animation: animaIntro 1s forwards;
   animation-delay: 2s;
 }
 
 @keyframes animaIntro {
   0% {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateY(-50px);
   }
-  50% {
-    opacity: 0.5;
-    top: 0;
-    transform: translateY(-10%);
+  90% {
+    opacity: 0.3;
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0%);
+    transform: translateY(0px);
   }
 }

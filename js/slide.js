@@ -128,7 +128,7 @@ export default class Slide {
     setTimeout(() => {
       this.slidesConfig();
       this.changeSlide(this.index.active);
-    }, 1000);
+    }, 500);
   }
 
   addResizeEvent() {

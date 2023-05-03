@@ -11,7 +11,7 @@
 }
 
 .texto-conhecimentos {
-  color: #aaaaaa;
+  color: #777777;
   font-size: 3rem;
   margin-bottom: 128px;
 }
@@ -24,28 +24,35 @@
   font-size: 4rem;
   color: #ffffff;
   font-weight: 400;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 .techs {
   display: flex;
+  justify-content: center;
   gap: 128px;
   flex-wrap: wrap;
 }
 
-:root {
-  --html: #505050;
-  --css: #505050;
-  --js: #505050;
-  --git: #505050;
-  --github: #505050;
-  --react: #505050;
-  --vue: #505050;
+.techs li {
+  position: relative;
+  display: block;
 }
 
 .tech {
-  width: 7vw;
+  width: 8vw;
   height: max-content;
+  position: relative;
+}
+
+:root {
+  --html: #e54c2166;
+  --css: #1572b666;
+  --js: #efd81d66;
+  --git: #e84d3166;
+  --github: #ffffff66;
+  --react: #5ed3f366;
+  --vue: #3fb27f66;
 }
 
 .tech:hover {
@@ -218,9 +225,8 @@
 
 @media (max-width: 768px) {
   #conhecimentos {
-    margin-bottom: 128px;
+    padding-bottom: 128px;
   }
-
   .titulo-conhecimentos {
     font-size: 2rem;
   }
@@ -234,6 +240,7 @@
   }
   .titulo2 {
     font-size: 2rem;
+    margin-bottom: 32px;
   }
 
   .techs {
@@ -243,11 +250,20 @@
   }
 
   .tech {
-    font-size: 20vw;
+    width: 10vw;
   }
 
   .tech-nome {
     font-size: 1rem;
     padding: 5px 10px;
+  }
+
+  .animaTech1 li::before,
+  .animaTech2 li::before {
+    bottom: -30%;
+  }
+
+  .techs li:hover::before {
+    bottom: -30%;
   }
 }
