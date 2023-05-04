@@ -6,16 +6,16 @@
 }
 
 .linha {
-  -webkit-text-stroke: 1px #ffffff;
+  -webkit-text-stroke: 1px var(--txt);
   color: transparent;
 }
 
 .cheio {
-  color: #ffffff;
+  color: var(--txt);
 }
 
 .nome-intro h2 {
-  color: #ffffff;
+  color: var(--txt);
   font-family: "clash";
   font-weight: 400;
   font-size: 4vw;

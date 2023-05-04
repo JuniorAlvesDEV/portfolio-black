@@ -2,26 +2,13 @@
   margin-bottom: 256px;
 }
 
-.titulo {
-  color: #ffffff;
-  font-size: 10rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.texto {
-  color: #777777;
-  font-size: 3rem;
-  margin-bottom: 128px;
-}
-
 .img-sobre {
   position: relative;
   margin-bottom: 128px;
 }
 
 .nome-foto {
-  color: #ffffff;
+  color: var(--txt);
   position: absolute;
   bottom: 10%;
   left: 10%;
@@ -32,6 +19,7 @@
 }
 
 .nome {
+  color: var(--txt);
   font-size: 1.6rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -39,6 +27,7 @@
 }
 
 .profissao {
+  color: var(--txt);
   letter-spacing: 0.05em;
 }
 

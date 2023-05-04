@@ -6,14 +6,14 @@
 }
 
 .contato-container label {
-  color: #aaaaaa;
+  color: #777777;
   text-transform: uppercase;
   display: block;
   margin-bottom: 5px;
 }
 
 .titulo-contato h2 {
-  color: #aaaaaa;
+  color: #777777;
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 16px;
@@ -39,15 +39,15 @@ textarea {
   font-size: 1.5rem;
   margin-bottom: 32px;
   border: 1px solid transparent;
-  background-color: hsla(0, 0%, 100%, 0.03);
+  background-color: var(--input);
   box-sizing: border-box;
   letter-spacing: 0.05em;
-  color: #aaaaaa;
+  color: var(--txt);
 }
 
 .contato-container input:hover,
 textarea:hover {
-  border: 1px solid #5c43d2;
+  border: 1px solid var(--c1);
 }
 
 .contato-container button {
@@ -57,8 +57,8 @@ textarea:hover {
   width: 100%;
   border: none;
   border-radius: 5px;
-  background-color: #5c43d2;
-  color: #ffffff;
+  background-color: var(--c1);
+  color: var(--txt);
   font-weight: 500;
   letter-spacing: 0.1em;
   transition: 0.2s;
@@ -66,7 +66,7 @@ textarea:hover {
 
 .contato-container button:hover {
   cursor: pointer;
-  background-color: #442eae;
+  background-color: var(--c1);
 }
 
 .midias-sociais {
@@ -74,12 +74,6 @@ textarea:hover {
   gap: 64px;
   align-items: end;
   justify-content: center;
-}
-
-:root {
-  --linkedin: #505050;
-  --email: #505050;
-  --whats: #505050;
 }
 
 .icone li {
@@ -92,11 +86,16 @@ textarea:hover {
   transition: 0.3s;
 }
 
+:root {
+  --linkedin: #00669977;
+  --email: #ec413477;
+  --whats: #1ad03f77;
+}
+
 .icone:hover {
   --linkedin: #006699;
   --email: #ec4134;
   --whats: #1ad03f;
-  transition: 0.3s;
 }
 
 .midias-sociais li {
@@ -110,7 +109,7 @@ textarea:hover {
   width: 100%;
   height: 15px;
   border-radius: 50%;
-  bottom: -10%;
+  bottom: -20%;
   transform: perspective(1em) rotateX(45deg);
   filter: blur(6px);
   opacity: 1;
@@ -137,7 +136,7 @@ textarea:hover {
 }
 
 .texto-form {
-  color: #aaaaaa;
+  color: var(--txt);
   font-size: 3rem;
   font-weight: 500;
   padding: 0 32px;
@@ -169,5 +168,8 @@ textarea:hover {
   }
   .texto-form {
     font-size: 2rem;
+  }
+  .midias-sociais li:hover::before {
+    bottom: -30%;
   }
 }

@@ -4,7 +4,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  background-color: #090909;
+  background-color: var(--bg);
   position: fixed;
   z-index: 5 !important;
   box-sizing: border-box;
@@ -38,7 +38,7 @@
 .btn-contato {
   padding: 0 16px;
   display: block;
-  color: #ffffff;
+  color: var(--txt);
   text-decoration: none;
   font-family: "clash";
   font-weight: 500;
@@ -50,7 +50,7 @@
 .menu-lista .item::after {
   content: "";
   display: block;
-  background-color: #ffffff;
+  background-color: var(--txt);
   height: 1px;
   width: 0%;
   transition: linear 0.3s;
@@ -62,7 +62,7 @@
 }
 
 .btn-contato {
-  background-color: #5c43d2;
+  background-color: var(--c1);
   padding: 10px 20px !important;
   border-radius: 5px;
   max-width: max-content;
@@ -70,7 +70,7 @@
 
 .btn-contato:hover,
 .btn-contato:focus {
-  background-color: #442eae;
+  background-color: var(--c1);
 }
 
 @media (max-width: 768px) {
@@ -93,7 +93,7 @@
   }
   .menu-lista .item {
     text-align: left;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid var(--txt);
     padding: 16px 0;
   }
 
@@ -120,20 +120,20 @@
   .l1 {
     height: 1px;
     width: 30px;
-    background-color: #ffffff;
+    background-color: var(--txt);
     transition: 0.5s;
   }
 
   .l2 {
     height: 1px;
     width: 25px;
-    background-color: #ffffff;
+    background-color: var(--txt);
     transition: 0.5s;
   }
   .l3 {
     height: 1px;
     width: 30px;
-    background-color: #ffffff;
+    background-color: var(--txt);
     transition: 0.5s;
   }
 
@@ -160,11 +160,11 @@
     position: absolute;
     width: 100%;
     left: 0;
-    background-color: #090909;
+    background-color: var(--bg);
     padding: 16px;
     align-items: start;
     gap: 0;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid var(--txt);
     animation: animaMenu 0.5s forwards;
     z-index: 1 !important;
     box-sizing: border-box;

@@ -1,0 +1,68 @@
+/* ======================================== CORES HABILIDADES */
+
+:root {
+  --c1: #5c43d2;
+  --c2: #442eae;
+  --txt: #ffffff;
+  --txt2: #ffffff77;
+  --bg: #090909;
+  --themeHover: rgba(92, 67, 210, 0.5);
+  --input: rgba(255, 255, 255, 0.03);
+  --bg2: rgba(0, 0, 0, 0.5);
+
+  --html: #e54c2188;
+  --css: #1572b886;
+  --js: #efd81d88;
+  --git: #e84d3188;
+  --github: #ffffff88;
+  --react: #5ed3f388;
+  --vue: #3fb27f88;
+}
+
+.tech:hover {
+  --html: #e54c21;
+  --css: #1572b6;
+  --js: #efd81d;
+  --git: #e84d31;
+  --github: #ffffff;
+  --react: #5ed3f3;
+  --vue: #3fb27f;
+}
+
+[data-theme="light"] {
+  --c1: #5c43d2;
+  --c2: #442eae;
+  --txt: #090909;
+  --txt2: #09090977;
+  --bg: #ece8ff;
+  --bg2: rgba(255, 255, 255, 0.5);
+  --themeHover: rgba(92, 67, 210, 0.5);
+  --input: rgba(0, 0, 0, 0.04);
+  --github: #00000088;
+}
+
+[data-theme="light"] .tech:hover {
+  --github: #000000;
+}
+
+.scroll-ativo .animaTech1 li:nth-child(1):hover::before,
+.scroll-ativo .animaTech1 li:nth-child(2):hover::before,
+.scroll-ativo .animaTech1 li:nth-child(3):hover::before,
+.scroll-ativo .animaTech1 li:nth-child(4):hover::before,
+.scroll-ativo .animaTech1 li:nth-child(5):hover::before,
+.scroll-ativo .animaTech2 li:nth-child(1):hover::before,
+.scroll-ativo .animaTech2 li:nth-child(2):hover::before {
+  --html: #e54c21;
+  --css: #1572b6;
+  --js: #efd81d;
+  --git: #e84d31;
+  --github: #ffffff;
+  --react: #5ed3f3;
+  --vue: #3fb27f;
+}
+
+[data-theme="light"] .scroll-ativo .animaTech1 li:nth-child(5):hover::before {
+  --github: #000000;
+}
+
+/* ======================================== CORES HABILIDADES */

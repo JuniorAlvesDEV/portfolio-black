@@ -23,9 +23,9 @@
   opacity: 0.5;
   transform: scale(0.9);
   transition: 0.5s;
-
   height: max-content;
 }
+
 .slide li.active {
   opacity: 1;
   transform: scale(1);
@@ -44,11 +44,11 @@
 }
 
 .link-externo {
-  background-color: #5c43d2;
+  background-color: var(--c1);
   padding: 10px 20px !important;
   border-radius: 5px;
   max-width: max-content;
-  color: #ffffff;
+  color: var(--txt);
   display: block;
   font-size: 2rem;
   text-transform: uppercase;
@@ -67,7 +67,7 @@
 
 .link-externo:hover,
 .link-externo:focus {
-  background-color: #442eae;
+  background-color: var(--c1);
   margin: 16px auto 0 auto;
 }
 
