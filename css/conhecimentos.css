@@ -30,6 +30,7 @@
 .techs {
   display: flex;
   justify-content: center;
+  align-items: end;
   gap: 128px;
   flex-wrap: wrap;
 }

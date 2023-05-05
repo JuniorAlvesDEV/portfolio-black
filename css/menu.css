@@ -14,7 +14,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 150px;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
 }
 
 .logo svg {
@@ -43,17 +48,17 @@
   font-family: "clash";
   font-weight: 500;
   font-size: 13px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .menu-lista .item::after {
   content: "";
   display: block;
-  background-color: var(--txt);
-  height: 1px;
+  background-color: var(--c1);
+  height: 2px;
   width: 0%;
-  transition: linear 0.3s;
+  transition: ease-out 0.3s;
 }
 
 .menu-lista .item:hover::after,
@@ -66,11 +71,13 @@
   padding: 10px 20px !important;
   border-radius: 5px;
   max-width: max-content;
+  color: var(--btn) !important;
+  transition: 0.3s;
 }
 
 .btn-contato:hover,
 .btn-contato:focus {
-  background-color: var(--c1);
+  background-color: var(--c2);
 }
 
 @media (max-width: 768px) {

@@ -58,15 +58,15 @@ textarea:hover {
   border: none;
   border-radius: 5px;
   background-color: var(--c1);
-  color: var(--txt);
+  color: var(--btn);
   font-weight: 500;
   letter-spacing: 0.1em;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .contato-container button:hover {
   cursor: pointer;
-  background-color: var(--c1);
+  background-color: var(--c2);
 }
 
 .midias-sociais {

@@ -45,7 +45,7 @@ img {
 
 footer {
   padding: 16px 32px;
-  color: #aaaaaa;
+  color: var(--txt);
 }
 
 .tooltip {
@@ -81,14 +81,15 @@ footer {
 
 .themes {
   position: fixed;
-  left: 64px;
-  bottom: 64px;
+  left: 32px;
+  bottom: 32px;
   background-color: var(--bg2);
-  padding: 16px;
   border: 2px solid var(--c1);
   border-radius: 10px;
   display: flex;
-  gap: 16px;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
 }
 
 .themes-title {
@@ -99,38 +100,87 @@ footer {
   margin-bottom: 16px;
 }
 
+.pointer {
+  cursor: pointer;
+  padding: 16px;
+}
+
 .paint {
-  max-width: 32px;
-  max-height: 32px;
+  width: 50px;
+  height: 50px;
   margin: 0 auto;
   display: block;
+  background: conic-gradient(
+    #f41209,
+    #f48e34,
+    #f4f400,
+    #68cb3b,
+    #18d2ea,
+    #0066cc,
+    #983598,
+    #f41209
+  );
+  border-radius: 50%;
 }
 
 .themes-colors {
-  display: none;
-}
-
-.themes.open {
-  padding-right: 32px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  animation: animaThemeColorsExit 2s forwards;
 }
 
 .themes.open .themes-colors {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-left: 32px;
   justify-content: center;
   align-items: center;
+  gap: 24px;
+
+  opacity: 1;
+  max-height: 1000px;
+  overflow: hidden;
+  animation: animaThemeColorsEntry 2s forwards;
+}
+
+@keyframes animaThemeColorsEntry {
+  0% {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    max-height: 1000px;
+    overflow: hidden;
+  }
+}
+
+@keyframes animaThemeColorsExit {
+  0% {
+    opacity: 1;
+    max-height: 1000px;
+    overflow: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
 }
 
 .theme-color {
   display: flex;
   flex-direction: column;
-  justify-content: centers;
+  justify-content: center;
   align-items: center;
   gap: 16px;
 
-  padding: 5px 16px;
+  padding: 8px;
   border-radius: 5px;
   cursor: pointer;
   color: var(--txt);
@@ -142,16 +192,35 @@ footer {
 
 .icon-theme {
   display: block;
-  max-width: 24px;
-  max-height: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.dark {
+  background-color: #4d4d4d;
+}
+
+.light {
+  background-color: #b3b3b3;
+}
+
+.pink {
+  background-color: #fc0fc0;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.green {
+  background-color: #03f03f;
 }
 
 .arrow-themes {
   position: absolute;
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-
+  top: -40px;
+  left: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,11 +228,12 @@ footer {
   width: 32px;
   height: 32px;
   cursor: pointer;
+  transition: 2s;
 }
 
 .themes.open .arrow-icon {
   transform: rotate(180deg);
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .arrow-icon {
@@ -173,15 +243,15 @@ footer {
 
 @keyframes animaArrow {
   0% {
-    transform: translateY(-50%) translateX(0);
+    transform: rotate(270deg) translateY(-50%) translateX(0);
   }
 
   50% {
-    transform: translateY(-50%) translateX(30%);
+    transform: rotate(270deg) translateY(-50%) translateX(30%);
   }
 
   100% {
-    transform: translateY(-50%) translateX(0);
+    transform: rotate(270deg) translateY(-50%) translateX(0);
   }
 }
 
@@ -193,37 +263,38 @@ footer {
   .themes {
     left: 16px;
     bottom: 16px;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
   }
 
   .themes-title {
-    font-size: 1rem;
-  }
-
-  .paint {
-    max-width: 24px;
-    max-height: 24px;
+    font-size: 0.725rem;
   }
 
   .pointer {
     padding: 8px;
   }
 
-  .themes.open {
-    padding-right: 16px;
+  .paint {
+    max-width: 32px;
+    max-height: 32px;
+  }
+
+  .themes-colors {
+    gap: 0px;
   }
 
   .themes.open .themes-colors {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+    gap: 0px;
   }
 
   .theme-color {
-    padding: 16px 5px;
+    padding: 16px 8px;
+    font-size: 0.725rem;
+    gap: 8px;
+  }
+
+  .icon-theme {
+    max-width: 32px;
+    max-height: 32px;
   }
 
   .arrow-themes {

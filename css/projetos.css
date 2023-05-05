@@ -48,7 +48,7 @@
   padding: 10px 20px !important;
   border-radius: 5px;
   max-width: max-content;
-  color: var(--txt);
+  color: var(--btn);
   display: block;
   font-size: 2rem;
   text-transform: uppercase;
@@ -61,13 +61,13 @@
 .active .link-externo {
   display: block;
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.3s;
   margin: 16px auto 0 auto;
 }
 
 .link-externo:hover,
 .link-externo:focus {
-  background-color: var(--c1);
+  background-color: var(--c2);
   margin: 16px auto 0 auto;
 }
 
