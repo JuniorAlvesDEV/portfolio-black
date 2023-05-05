@@ -19,7 +19,7 @@
 }
 
 .nome {
-  color: var(--txt);
+  color: var(--bg);
   font-size: 1.6rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -27,7 +27,7 @@
 }
 
 .profissao {
-  color: var(--txt);
+  color: var(--bg);
   letter-spacing: 0.05em;
 }
 

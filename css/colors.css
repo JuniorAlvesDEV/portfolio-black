@@ -1,7 +1,7 @@
 /* ======================================== CORES GERAIS */
 
 /* ===== PADRÃO DARK ↓↓↓↓↓↓↓↓↓ */
-:root {
+[data-theme="dark-purple"] {
   --logo: #ffffff;
   --c1: #5c43d2;
   --c2: #302469;
@@ -10,13 +10,14 @@
   --btn: #ffffff;
   --bg: #0d0d0d;
   --bg2: rgba(0, 0, 0, 0.5);
-  --themeHover: rgba(92, 67, 210, 0.5);
   --input: rgba(255, 255, 255, 0.03);
+
+  --themeHover: rgba(92, 67, 210, 0.5);
 }
 
 /* ===== PADRÃO DARK ↑↑↑↑↑↑↑↑↑↑ */
 
-[data-theme="light"] {
+[data-theme="light-purple"] {
   --logo: #000000;
   --c1: #5c43d2;
   --c2: #302469;
@@ -25,55 +26,117 @@
   --btn: #ffffff;
   --bg: #e6e6e6;
   --bg2: rgba(255, 255, 255, 0.5);
-  --themeHover: rgba(92, 67, 210, 0.5);
   --input: rgba(0, 0, 0, 0.04);
+
+  --themeHover: rgba(92, 67, 210, 0.5);
 }
 
-[data-theme="pink"] {
+[data-theme="dark-pink"] {
   --logo: #ffffff;
   --c1: #fc0fc0;
   --c2: #65014c;
   --txt: #e6e6e6;
   --txt2: #808080;
   --btn: #ffffff;
-  --bg: #090909;
+  --bg: #0d0d0d;
   --bg2: rgba(0, 0, 0, 0.5);
-  --themeHover: rgba(252, 15, 192, 0.5);
   --input: rgba(255, 255, 255, 0.03);
+
+  --themeHover: rgba(252, 15, 192, 0.5);
 }
 
-[data-theme="red"] {
+[data-theme="light-pink"] {
+  --logo: #000000;
+  --c1: #fc0fc0;
+  --c2: #65014c;
+  --txt: #0d0d0d;
+  --txt2: #4d4d4d;
+  --btn: #ffffff;
+  --bg: #e6e6e6;
+  --bg2: rgba(255, 255, 255, 0.5);
+  --input: rgba(0, 0, 0, 0.04);
+
+  --themeHover: rgba(252, 15, 192, 0.5);
+}
+
+[data-theme="dark-red"] {
   --logo: #ffffff;
   --c1: #ff0000;
   --c2: #660000;
   --txt: #e6e6e6;
   --txt2: #808080;
   --btn: #ffffff;
-  --bg: #090909;
+  --bg: #0d0d0d;
   --bg2: rgba(0, 0, 0, 0.5);
-  --themeHover: rgba(255, 0, 0, 0.5);
   --input: rgba(255, 255, 255, 0.03);
+
+  --themeHover: rgba(255, 0, 0, 0.5);
 }
 
-[data-theme="green"] {
+[data-theme="light-red"] {
+  --logo: #000000;
+  --c1: #ff0000;
+  --c2: #660000;
+  --txt: #0d0d0d;
+  --txt2: #4d4d4d;
+  --btn: #ffffff;
+  --bg: #e6e6e6;
+  --bg2: rgba(255, 255, 255, 0.5);
+  --input: rgba(0, 0, 0, 0.04);
+
+  --themeHover: rgba(255, 0, 0, 0.5);
+}
+
+[data-theme="dark-green"] {
   --logo: #ffffff;
   --c1: #00ff00;
   --c2: #006600;
   --txt: #e6e6e6;
   --txt2: #808080;
   --btn: #0d0d0d;
-  --bg: #090909;
+  --bg: #0d0d0d;
   --bg2: rgba(0, 0, 0, 0.5);
-  --themeHover: rgba(0, 255, 0, 0.5);
   --input: rgba(255, 255, 255, 0.03);
+
+  --themeHover: rgba(0, 255, 0, 0.5);
+}
+
+[data-theme="light-green"] {
+  --logo: #000000;
+  --c1: #00ff00;
+  --c2: #006600;
+  --txt: #0d0d0d;
+  --txt2: #4d4d4d;
+  --btn: #ffffff;
+  --bg: #e6e6e6;
+  --bg2: rgba(255, 255, 255, 0.5);
+  --input: rgba(0, 0, 0, 0.04);
+
+  --themeHover: rgba(0, 255, 0, 0.5);
 }
 
 /* ======================================== CORES HABILIDADES */
-[data-theme="light"] {
+[data-theme="light-purple"],
+[data-theme="light-pink"],
+[data-theme="light-red"],
+[data-theme="light-green"] {
   --github: #00000088;
 }
 
-[data-theme="light"] .tech:hover {
+[data-theme="light-purple"],
+[data-theme="light-pink"],
+[data-theme="light-red"],
+[data-theme="light-green"] .tech:hover {
+  --github: #000000;
+}
+
+[data-theme="light-purple"],
+[data-theme="light-pink"],
+[data-theme="light-red"],
+[data-theme="light-green"]
+  .scroll-ativo
+  .animaTech1
+  li:nth-child(5):hover::before {
   --github: #000000;
 }
 
@@ -111,10 +174,6 @@
   --github: #ffffff;
   --react: #5ed3f3;
   --vue: #3fb27f;
-}
-
-[data-theme="light"] .scroll-ativo .animaTech1 li:nth-child(5):hover::before {
-  --github: #000000;
 }
 
 /* ======================================== CORES HABILIDADES */

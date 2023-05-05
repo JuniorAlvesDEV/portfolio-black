@@ -197,24 +197,36 @@ footer {
   border-radius: 50%;
 }
 
-.dark {
-  background-color: #4d4d4d;
+.dark-purple {
+  background: linear-gradient(to right, #4d4d4d 50%, #5c43d2 50%);
 }
 
-.light {
-  background-color: #b3b3b3;
+.light-purple {
+  background: linear-gradient(to right, #b3b3b3 50%, #5c43d2 50%);
 }
 
-.pink {
-  background-color: #fc0fc0;
+.dark-pink {
+  background: linear-gradient(to right, #4d4d4d 50%, #fc0fc0 50%);
 }
 
-.red {
-  background-color: #ff0000;
+.light-pink {
+  background: linear-gradient(to right, #b3b3b3 50%, #fc0fc0 50%);
 }
 
-.green {
-  background-color: #03f03f;
+.dark-red {
+  background: linear-gradient(to right, #4d4d4d 50%, #ff0000 50%);
+}
+
+.light-red {
+  background: linear-gradient(to right, #b3b3b3 50%, #ff0000 50%);
+}
+
+.dark-green {
+  background: linear-gradient(to right, #4d4d4d 50%, #03f03f 50%);
+}
+
+.light-green {
+  background: linear-gradient(to right, #b3b3b3 50%, #03f03f 50%);
 }
 
 .arrow-themes {
