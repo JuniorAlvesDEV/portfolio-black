@@ -5,12 +5,16 @@ import Slide from "./slide.js";
 import formulario from "./formulario.js";
 import initTooltip from "./tooltips.js";
 import initThemes from "./themes.js";
+import initInstagramImages from "./instagram.js";
 
 menuMobile();
 scrollSuave();
 scrollAnimado();
 formulario();
-const slide = new Slide(".slide", ".slide-wrapper");
-slide.init();
 initThemes();
+initInstagramImages();
+
+const slideProjetos = new Slide("[data-slide]", "[data-slide-wrapper]");
+slideProjetos.init();
+
 initTooltip();

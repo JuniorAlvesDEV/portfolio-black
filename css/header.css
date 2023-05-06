@@ -40,6 +40,7 @@
   font-size: 14.5vw;
   opacity: 0;
   animation: animaIntro 1s forwards;
+  display: inline-block;
 }
 
 .font:nth-child(1) {
@@ -73,14 +74,14 @@
 @keyframes animaIntro {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(50%);
   }
   90% {
-    opacity: 0.3;
+    opacity: 0.1;
+    transform: translateY(-10%);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0px);
   }
 }

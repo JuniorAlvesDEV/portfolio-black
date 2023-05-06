@@ -229,44 +229,6 @@ footer {
   background: linear-gradient(to right, #b3b3b3 50%, #03f03f 50%);
 }
 
-.arrow-themes {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: animaArrow 2s infinite;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  transition: 2s;
-}
-
-.themes.open .arrow-icon {
-  transform: rotate(180deg);
-  transition: 1s;
-}
-
-.arrow-icon {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-@keyframes animaArrow {
-  0% {
-    transform: rotate(270deg) translateY(-50%) translateX(0);
-  }
-
-  50% {
-    transform: rotate(270deg) translateY(-50%) translateX(30%);
-  }
-
-  100% {
-    transform: rotate(270deg) translateY(-50%) translateX(0);
-  }
-}
-
 @media (max-width: 768px) {
   .tooltip {
     padding: 0.5em 1em;
@@ -307,33 +269,5 @@ footer {
   .icon-theme {
     max-width: 32px;
     max-height: 32px;
-  }
-
-  .arrow-themes {
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%) translateY(0);
-  }
-
-  @keyframes animaArrow {
-    0% {
-      transform: translateY(0) translateX(-50%);
-    }
-
-    50% {
-      transform: translateY(-30%) translateX(-50%);
-    }
-
-    100% {
-      transform: translateY(0) translateX(-50%);
-    }
-  }
-
-  .arrow-icon {
-    transform: rotate(270deg);
-  }
-
-  .themes.open .arrow-icon {
-    transform: rotate(90deg);
   }
 }

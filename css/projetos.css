@@ -31,11 +31,6 @@
   transform: scale(1);
 }
 
-.tech-projeto img {
-  max-width: 40px;
-  position: relative;
-}
-
 .link-externo {
   display: block;
   opacity: 1;
