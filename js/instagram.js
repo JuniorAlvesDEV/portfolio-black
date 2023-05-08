@@ -1,7 +1,7 @@
 export default function instagramImages() {}
 
 const token =
-  "IGQVJXaVdBa3FISzBPNGJ5bGY3S1dldXN6WENGRUNCRzJBazg5QmpLTzFhaUJvRW1wdTdxSk1zT01xZA1pjYWE0bXRLSHFkc21JQmlaSlVyeEs0QjE3NUlLZAURfVG52Y0wxYlh3N0twbXVCWEVNcW1tVgZDZD";
+  "IGQVJYY29RQkw5Uzg2TkJnYkkwQThpVTJtdTJoY3FFUzBvODh2SzdjU05lb2U5RXRpT2lXdjEtMlFMWFNyOEVrQ2lTU0YybWdwSzNZAX003U1l6ejNlMm90SGpXejB1Q3RvYXhBcGF2MlFjTjQ4U0djOAZDZD";
 
 const link =
   "https://graph.instagram.com/me/media?access_token=" +

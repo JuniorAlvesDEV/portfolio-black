@@ -8,39 +8,15 @@
 }
 
 .img-sobre-wrapper {
-  height: max-content;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  gap: 32px;
 }
 
 .img-instagram {
-  height: 100%;
-  max-width: 33.3%;
-}
-.nome-foto {
-  color: var(--txt);
-  position: absolute;
-  bottom: 10%;
-  left: 10%;
-}
-
-.nome-foto span {
-  display: block;
-}
-
-.nome {
-  color: var(--bg);
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  margin-bottom: 5px;
-}
-
-.profissao {
-  color: var(--bg);
-  letter-spacing: 0.05em;
+  height: 600px;
+  width: 600px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 1280px) {
@@ -65,19 +41,5 @@
   .texto {
     font-size: 1rem;
     margin-bottom: 64px;
-  }
-
-  .img-sobre {
-    margin-bottom: 64px;
-  }
-
-  .nome {
-    font-size: 0.8rem;
-    margin-bottom: 0px;
-  }
-
-  .profissao {
-    letter-spacing: 0.05em;
-    font-size: 0.5rem;
   }
 }
