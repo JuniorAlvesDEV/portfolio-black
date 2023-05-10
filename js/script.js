@@ -34,9 +34,9 @@ initJSModules();
 
 formulario();
 initInstagramImages();
+slideProjetos.init();
 
 initTooltip();
-slideProjetos.init();
 
 ////////////////////////////////////////////////////////////////
 //
