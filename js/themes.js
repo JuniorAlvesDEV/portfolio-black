@@ -1,25 +1,37 @@
-export default function initThemes() {
-  const boxThemes = document.querySelector("[data-box-theme]");
-  const containerThemes = document.querySelector("[data-themes-container]");
-  const colorThemes = document.querySelectorAll("[data-theme-color]");
-  const bodyTheme = document.querySelector("body");
+export default class Themes {
+  constructor(boxthemes, color, container) {
+    this.boxThemes = document.querySelector(boxthemes);
+    this.colorThemes = document.querySelectorAll(color);
+    this.containerThemes = document.querySelector(container);
 
-  if (localStorage.theme) {
-    bodyTheme.setAttribute("data-theme", localStorage.theme);
+    this.toggleContainer = this.toggleContainer.bind(this);
+    this.themeSelector = this.themeSelector.bind(this);
   }
 
-  boxThemes.addEventListener("click", () => {
-    containerThemes.classList.toggle("open");
-  });
-
-  function themeSelector() {
-    const color = this.getAttribute("aria-label");
-    bodyTheme.setAttribute("data-theme", color);
-    containerThemes.classList.remove("open");
-    localStorage.theme = bodyTheme.getAttribute("data-theme");
+  themeSelector(event) {
+    const color = event.target.getAttribute("aria-label");
+    document.body.setAttribute("data-theme", color);
+    localStorage.theme = document.body.getAttribute("data-theme");
+    this.containerThemes.classList.remove("open");
   }
 
-  colorThemes.forEach((item) => {
-    item.addEventListener("click", themeSelector);
-  });
+  toggleContainer() {
+    this.containerThemes.classList.toggle("open");
+  }
+
+  startEvents() {
+    if (localStorage.theme) {
+      document.body.setAttribute("data-theme", localStorage.theme);
+    }
+
+    this.colorThemes.forEach((item) => {
+      item.addEventListener("click", this.themeSelector);
+    });
+
+    this.boxThemes.addEventListener("click", this.toggleContainer);
+  }
+
+  init() {
+    this.startEvents();
+  }
 }

@@ -65,13 +65,13 @@ footer {
   }
 }
 
-.js-scroll {
+[data-scroll-animado] {
   opacity: 0;
   transition: 1s;
   transform: translateY(100px);
 }
 
-.js-scroll.scroll-ativo {
+[data-scroll-animado].scroll-ativo {
   opacity: 1;
   transition: 2s;
   transform: translateY(0);
@@ -229,7 +229,25 @@ footer {
   background: linear-gradient(to right, #b3b3b3 50%, #03f03f 50%);
 }
 
+@media (max-width: 1280px) {
+  .titulo {
+    font-size: 7rem;
+  }
+
+  .texto {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .titulo {
+    font-size: 3rem;
+  }
+
+  .texto {
+    font-size: 1rem;
+    margin-bottom: 64px;
+  }
   .tooltip {
     padding: 0.5em 1em;
   }

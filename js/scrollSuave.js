@@ -1,7 +1,9 @@
-export default function scrollSuave() {
-  const linkInterno = document.querySelectorAll("a[href^='#']");
+export default class ScrollSuave {
+  constructor(linkInterno) {
+    this.linkInterno = document.querySelectorAll(linkInterno);
+  }
 
-  function scrolSessao(event) {
+  scrollSessao(event) {
     event.preventDefault();
     const href = event.currentTarget.getAttribute("href");
     const sessao = document.querySelector(href);
@@ -13,7 +15,13 @@ export default function scrollSuave() {
     });
   }
 
-  linkInterno.forEach((link) => {
-    link.addEventListener("click", scrolSessao);
-  });
+  startEvents() {
+    this.linkInterno.forEach((link) => {
+      link.addEventListener("click", this.scrollSessao);
+    });
+  }
+
+  init() {
+    this.startEvents();
+  }
 }

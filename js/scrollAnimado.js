@@ -1,16 +1,24 @@
-export default function scrollAnimado() {
-  const jsScroll = document.querySelectorAll(".js-scroll");
+export default class scrollAnimado {
+  constructor(sections) {
+    this.sections = document.querySelectorAll(sections);
+    this.animaScroll = this.animaScroll.bind(this);
+  }
 
-  function animaScroll() {
-    jsScroll.forEach((sessao) => {
+  animaScroll() {
+    this.sections.forEach((section) => {
       const tela = window.innerHeight * 0.7;
-      const sessaoTop = sessao.getBoundingClientRect().top - tela;
-
-      if (sessaoTop < 0) {
-        sessao.classList.add("scroll-ativo");
+      const sectionTop = section.getBoundingClientRect().top - tela;
+      if (sectionTop < 0) {
+        section.classList.add("scroll-ativo");
       }
     });
   }
 
-  window.addEventListener("scroll", animaScroll);
+  startEvents() {
+    window.addEventListener("scroll", this.animaScroll);
+  }
+
+  init() {
+    this.startEvents();
+  }
 }
