@@ -6,6 +6,7 @@ import initInstagramImages from "./instagram.js";
 import initTooltip from "./tooltips.js";
 import Slide from "./slide.js";
 import formulario from "./formulario.js";
+import Cursor from "./cursor.js";
 
 const initMenuMobile = new MenuMobile(
   "[data-hamburguer]",
@@ -19,12 +20,14 @@ const initThemes = new Themes(
   "[data-themes-container]"
 );
 const slideProjetos = new Slide("[data-slide]", "[data-slide-wrapper]");
+const initCursor = new Cursor("[data-cursor]");
 
 function initJSModules() {
   initMenuMobile.init();
   initScrollSuave.init();
   initScrollAnimado.init();
   initThemes.init();
+  initCursor.init();
 
   slideProjetos.init();
 }
@@ -33,13 +36,13 @@ initJSModules();
 formulario();
 initInstagramImages();
 
-// initTooltip();
+initTooltip();
 
 ////////////////////////////////////////////////////////////////
 //
 //
 
-// Slide sobre sendo iniciado no final do fetch instagam
+// SLIDE SOBRE SENDO INICIADO AO TERMINO DO FECTH INSTAGRAM
 
 // import SlideSobre from "./slideSobre.js";
 

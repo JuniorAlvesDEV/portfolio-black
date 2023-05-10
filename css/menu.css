@@ -1,6 +1,6 @@
 .menu-bar {
   padding: 20px 40px;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid var(--c1);
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -72,15 +72,19 @@
   border-radius: 5px;
   max-width: max-content;
   color: var(--btn) !important;
-  transition: 0.3s;
 }
 
 .btn-contato:hover,
 .btn-contato:focus {
+  transition: 0.3s;
   background-color: var(--c2);
 }
 
 @media (max-width: 768px) {
+  #top,
+  #hamburguer {
+    z-index: 10000 !important;
+  }
   .logo {
     width: 100px;
   }
@@ -99,9 +103,11 @@
     width: 100%;
   }
   .menu-lista .item {
-    text-align: left;
-    border-bottom: 1px solid var(--txt);
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
     padding: 16px 0;
+    font-weight: 400;
   }
 
   .menu-lista .item:hover::after,
@@ -110,10 +116,11 @@
   }
 
   .btn-contato {
-    margin-top: 32px;
-    width: 100%;
-    max-width: 100%;
+    max-width: max-content;
     text-align: center;
+    margin: 32px auto 0 auto;
+    padding: 16px 32px !important;
+    font-size: 1.5rem !important;
   }
 
   .hamburguer {
@@ -159,19 +166,18 @@
   }
 
   .menu-lista {
-    display: none;
-  }
-  .abrir-menu .menu-lista {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 100%;
+    top: -110vh;
     left: 0;
+    width: 100%;
+    height: 100vh;
     background-color: var(--bg);
-    padding: 16px;
-    align-items: start;
-    gap: 0;
-    border-bottom: 1px solid var(--txt);
+    gap: 16px;
+  }
+  .abrir-menu .menu-lista {
+    top: 0;
     animation: animaMenu 0.5s forwards;
     z-index: 1 !important;
     box-sizing: border-box;
@@ -179,15 +185,14 @@
 
   @keyframes animaMenu {
     from {
-      top: -100%;
+      top: -110vh;
       max-height: 0;
-      opacity: 0;
     }
 
     to {
-      top: 40px;
+      top: 0;
+
       max-height: 6000px;
-      opacity: 1;
     }
   }
 }
