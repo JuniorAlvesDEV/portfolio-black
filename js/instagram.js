@@ -7,9 +7,9 @@ export default function instagramImages() {
   const link =
     "https://graph.instagram.com/me/media?access_token=" +
     token +
-    "&fields=media_url,media_type,caption,permalink";
+    "&fields=media_url,media_type";
 
-  async function getData() {
+  async function startFetch() {
     const instagramFetch = await fetch(link);
     const instagramJson = await instagramFetch.json();
     const instagramData = await instagramJson.data;
@@ -33,9 +33,8 @@ export default function instagramImages() {
     const createLi = document.createElement("li");
     createLi.classList.add("img-instagram");
     createLi.innerHTML = `<img src="${img}" alt="">`;
-
     return createLi;
   }
 
-  getData();
+  startFetch();
 }
