@@ -1,32 +1,41 @@
-export default function instagramImages() {}
+import SlideSobre from "./slideSobre.js";
 
-const token =
-  "IGQVJYY29RQkw5Uzg2TkJnYkkwQThpVTJtdTJoY3FFUzBvODh2SzdjU05lb2U5RXRpT2lXdjEtMlFMWFNyOEVrQ2lTU0YybWdwSzNZAX003U1l6ejNlMm90SGpXejB1Q3RvYXhBcGF2MlFjTjQ4U0djOAZDZD";
+export default function instagramImages() {
+  const token =
+    "IGQVJYY29RQkw5Uzg2TkJnYkkwQThpVTJtdTJoY3FFUzBvODh2SzdjU05lb2U5RXRpT2lXdjEtMlFMWFNyOEVrQ2lTU0YybWdwSzNZAX003U1l6ejNlMm90SGpXejB1Q3RvYXhBcGF2MlFjTjQ4U0djOAZDZD";
 
-const link =
-  "https://graph.instagram.com/me/media?access_token=" +
-  token +
-  "&fields=media_url,media_type,caption,permalink";
+  const link =
+    "https://graph.instagram.com/me/media?access_token=" +
+    token +
+    "&fields=media_url,media_type,caption,permalink";
 
-async function getData() {
-  const instagramFetch = await fetch(link);
-  const instagramJson = await instagramFetch.json();
-  const instagramData = await instagramJson.data;
+  async function getData() {
+    const instagramFetch = await fetch(link);
+    const instagramJson = await instagramFetch.json();
+    const instagramData = await instagramJson.data;
 
-  instagramData.forEach((item) => {
-    const newImg = document.querySelector("[data-new-image]");
-    const createLi = createImages(item.media_url);
+    instagramData.forEach((item) => {
+      const newImg = document.querySelector("[data-new-image]");
+      const createLi = createImages(item.media_url);
+      newImg.appendChild(createLi);
+    });
 
-    newImg.appendChild(createLi);
-  });
+    const initSlideSobre = new SlideSobre(
+      '[data-slide-sobre="wrapper"]',
+      '[data-slide-sobre="slide"]'
+    );
+
+    initSlideSobre.init();
+    initSlideSobre.slideCenter(3);
+  }
+
+  function createImages(img) {
+    const createLi = document.createElement("li");
+    createLi.classList.add("img-instagram");
+    createLi.innerHTML = `<img src="${img}" alt="">`;
+
+    return createLi;
+  }
+
+  getData();
 }
-
-function createImages(img) {
-  const createLi = document.createElement("li");
-  createLi.classList.add("img-instagram");
-  createLi.innerHTML = `<img src="${img}" alt="">`;
-
-  return createLi;
-}
-
-getData();

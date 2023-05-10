@@ -2,44 +2,33 @@
   margin-bottom: 256px;
 }
 
-.img-sobre {
-  position: relative;
+.img-sobre-wrapper {
   margin-bottom: 128px;
+  overflow: hidden;
 }
 
-.img-sobre-wrapper {
+.img-sobre {
   display: flex;
-  overflow: hidden;
   gap: 32px;
 }
 
 .img-instagram {
-  height: 600px;
-  width: 600px;
+  width: 40vw;
+  max-width: 600px;
   flex-shrink: 0;
+
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: 0.5s;
 }
 
-@media (max-width: 1280px) {
-  .titulo {
-    font-size: 7rem;
-  }
-
-  .texto {
-    font-size: 2rem;
-  }
+.img-instagram.img-active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media (max-width: 768px) {
   #sobre {
     margin-bottom: 128px;
-  }
-
-  .titulo {
-    font-size: 3rem;
-  }
-
-  .texto {
-    font-size: 1rem;
-    margin-bottom: 64px;
   }
 }

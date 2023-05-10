@@ -1,17 +1,25 @@
-export default function menuMobile() {
-  const hamburguer = document.querySelector(".hamburguer");
-  const html = document.querySelector("html");
-  const itens = document.querySelectorAll(".js-seletor");
-
-  function abrirMenu() {
-    html.classList.toggle("abrir-menu");
+export default class MenuMobile {
+  constructor(hamburguer, itens) {
+    this.hamburguer = document.querySelector(hamburguer);
+    this.itens = document.querySelectorAll(itens);
   }
 
-  hamburguer.addEventListener("click", abrirMenu);
+  abrirMenu() {
+    document.documentElement.classList.toggle("abrir-menu");
+  }
 
-  itens.forEach((item) => {
-    item.addEventListener("click", () => {
-      html.classList.remove("abrir-menu");
+  fecharMenu() {
+    document.documentElement.classList.remove("abrir-menu");
+  }
+
+  startEvents() {
+    this.hamburguer.addEventListener("click", this.abrirMenu);
+    this.itens.forEach((item) => {
+      item.addEventListener("click", this.fecharMenu);
     });
-  });
+  }
+
+  init() {
+    this.startEvents();
+  }
 }

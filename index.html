@@ -61,12 +61,12 @@
         </a>
         <div class="menu-itens">
             <ul class="menu-lista">
-                <li><a class="item js-seletor" href="#sobre">Sobre</a></li>
-                <li><a class="item js-seletor" href="#conhecimentos">Conhecimentos</a></li>
-                <li><a class="item js-seletor" href="#projetos">Projetos</a></li>
-                <li><a class="btn-contato js-seletor" href="#contato">Contato</a></li>
+                <li><a data-js-selector class="item" href="#sobre">Sobre</a></li>
+                <li><a data-js-selector class="item" href="#conhecimentos">Conhecimentos</a></li>
+                <li><a data-js-selector class="item" href="#projetos">Projetos</a></li>
+                <li><a data-js-selector class="btn-contato" href="#contato">Contato</a></li>
             </ul>
-            <div class="hamburguer">
+            <div class="hamburguer" data-hamburguer>
                 <li class="l1"></li>
                 <li class="l2"></li>
                 <li class="l3"></li>
@@ -94,8 +94,9 @@
     </header>
     <section id="sobre">
         <div class="container">
-            <h2 class="titulo js-scroll">Sobre</h2>
-            <p class="texto js-scroll">Olá! Meu nome é Junior e gosto de criar coisas na internet. Meu interesse
+            <h2 class="titulo " data-scroll-animado>Sobre</h2>
+            <p class="texto " data-scroll-animado>Olá! Meu nome é Junior e gosto de criar coisas na internet. Meu
+                interesse
                 em
                 desenvolvimento web começou
                 em 2022, quando meu primo me apresentou a profissão.
@@ -104,8 +105,8 @@
         </div>
 
 
-        <div class="img-sobre js-scroll">
-            <ul class="img-sobre-wrapper" data-new-image data-slide-sobre-wrapper>
+        <div class="img-sobre-wrapper" data-scroll-animado data-slide-sobre="wrapper">
+            <ul class="img-sobre" data-new-image data-slide-sobre="slide">
             </ul>
         </div>
     </section>
@@ -113,11 +114,11 @@
     <section id="conhecimentos">
         <div class="container">
             <div>
-                <h2 class="titulo js-scroll">Habilidades</h2>
-                <p class="texto js-scroll">Algumas tecnologias que conheço ou ainda vou
+                <h2 class="titulo " data-scroll-animado>Habilidades</h2>
+                <p class="texto " data-scroll-animado>Algumas tecnologias que conheço ou ainda vou
                     estudar.
                 </p>
-                <div class="estudado js-scroll">
+                <div class="estudado " data-scroll-animado>
                     <h3 class="titulo2">Eu conheço :</h3>
                     <div class="icones-tech">
                         <ul class="techs animaTech1">
@@ -170,7 +171,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="nao-estudado js-scroll">
+                <div class="nao-estudado " data-scroll-animado>
                     <h3 class="titulo2">Proximas a aprender :</h3>
                     <div class="icones-tech ">
                         <ul class="techs animaTech2">
@@ -202,12 +203,12 @@
 
     <section id="projetos">
         <div class="container">
-            <h2 class="titulo  js-scroll">Projetos</h2>
-            <p class="texto  js-scroll">Alguns projetos que eu faço para praticar minhas habilidades.</p>
+            <h2 class="titulo  " data-scroll-animado>Projetos</h2>
+            <p class="texto  " data-scroll-animado>Alguns projetos que eu faço para praticar minhas habilidades.</p>
 
 
         </div>
-        <div class="projetos-conteudo js-scroll">
+        <div class="projetos-conteudo " data-scroll-animado>
             <div class="slide-wrapper" data-slide-wrapper>
                 <ul class="slide" data-slide>
 
@@ -260,9 +261,9 @@
         <div class="container">
             <div class="contato-container">
                 <div class="titulo-contato">
-                    <h2 class="js-scroll">Contato</h2>
-                    <h3 class="titulo2 js-scroll">Vamos<br>Conversar</h3>
-                    <ul class="midias-sociais js-scroll">
+                    <h2 class="" data-scroll-animado>Contato</h2>
+                    <h3 class="titulo2 " data-scroll-animado>Vamos<br>Conversar</h3>
+                    <ul class="midias-sociais " data-scroll-animado>
 
                         <li>
                             <a href="https://www.linkedin.com/in/juuniordev" target="_blank">
@@ -299,7 +300,7 @@
 
                     </ul>
                 </div>
-                <form action="./enviar.php" method="post" class="formulario js-scroll">
+                <form action="./enviar.php" method="post" class="formulario " data-scroll-animado>
                     <div class="input-wraper">
                         <label for="nome">Nome</label>
                         <input type="text" placeholder="Nome" id="nome" name="nome" required>
@@ -329,53 +330,53 @@
         <ul class="themes-colors">
 
             <div>
-                <li data-theme-color aria-label="dark-purple" class="theme-color">
-                    <div class="icon-theme dark-purple">
-                    </div>
+                <li data-theme-color aria-label="dark-purple" class="theme-color ">
+                    <span class="icon-theme dark-purple" aria-label="dark-purple">
+                    </span>
                 </li>
 
                 <li data-theme-color aria-label="light-purple" class="theme-color">
-                    <div class="icon-theme light-purple">
-                    </div>
+                    <span class="icon-theme light-purple" aria-label="light-purple">
+                    </span>
                 </li>
             </div>
+
             <div>
                 <li data-theme-color aria-label="dark-pink" class="theme-color">
-                    <div class="icon-theme dark-pink">
-                    </div>
+                    <span class="icon-theme dark-pink" aria-label="dark-pink">
+                    </span>
                 </li>
 
                 <li data-theme-color aria-label="light-pink" class="theme-color">
-                    <div class="icon-theme light-pink">
-                    </div>
+                    <span class="icon-theme light-pink" aria-label="light-pink">
+                    </span>
                 </li>
             </div>
 
             <div>
                 <li data-theme-color aria-label="dark-red" class="theme-color">
-                    <div class="icon-theme dark-red">
-                    </div>
+                    <span class="icon-theme dark-red" aria-label="dark-red">
+                    </span>
                 </li>
 
                 <li data-theme-color aria-label="light-red" class="theme-color">
-                    <div class="icon-theme light-red">
-                    </div>
+                    <span class="icon-theme light-red" aria-label="light-red">
+                    </span>
                 </li>
             </div>
 
             <div>
                 <li data-theme-color aria-label="dark-green" class="theme-color">
-                    <div class="icon-theme dark-green">
-                    </div>
-
+                    <span class="icon-theme dark-green" aria-label="dark-green">
+                    </span>
                 </li>
 
                 <li data-theme-color aria-label="light-green" class="theme-color">
-                    <div class="icon-theme light-green">
-                    </div>
-
+                    <span class="icon-theme light-green" aria-label="light-green">
+                    </span>
                 </li>
             </div>
+
         </ul>
     </div>
     <footer>
