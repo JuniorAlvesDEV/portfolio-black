@@ -2,11 +2,12 @@ import MenuMobile from "./menu.js";
 import ScrollSuave from "./scrollSuave.js";
 import ScrollAnimado from "./scrollAnimado.js";
 import Themes from "./themes.js";
+import Cursor from "./cursor.js";
+
 import initInstagramImages from "./instagram.js";
 import initTooltip from "./tooltips.js";
 import Slide from "./slide.js";
 import formulario from "./formulario.js";
-import Cursor from "./cursor.js";
 
 const initMenuMobile = new MenuMobile(
   "[data-hamburguer]",
@@ -28,8 +29,6 @@ function initJSModules() {
   initScrollAnimado.init();
   initThemes.init();
   initCursor.init();
-
-  slideProjetos.init();
 }
 initJSModules();
 
@@ -37,6 +36,7 @@ formulario();
 initInstagramImages();
 
 initTooltip();
+slideProjetos.init();
 
 ////////////////////////////////////////////////////////////////
 //
