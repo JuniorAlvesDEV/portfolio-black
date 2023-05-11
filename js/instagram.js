@@ -1,4 +1,4 @@
-import SlideSobre from "./slideSobre.js";
+import Slide from "./Slide.js";
 
 export default function instagramImages() {
   const token =
@@ -20,7 +20,7 @@ export default function instagramImages() {
       newImg.appendChild(createLi);
     });
 
-    const initSlideSobre = new SlideSobre(
+    const initSlideSobre = new Slide(
       '[data-slide-sobre="wrapper"]',
       '[data-slide-sobre="slide"]'
     );

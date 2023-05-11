@@ -24,9 +24,11 @@
   transform: scale(0.9);
   transition: 0.5s;
   height: max-content;
+  position: relative;
+  overflow: hidden;
 }
 
-.slide li.active {
+.slide .img-active {
   opacity: 1;
   transform: scale(1);
 }
@@ -35,35 +37,40 @@
   display: block;
   opacity: 1;
   transition: 0.5s;
-  margin: 16px auto 0 auto;
-}
-
-.link-externo {
+  width: 100%;
+  text-align: center;
+  border-radius: 0;
   background-color: var(--c1);
-  padding: 10px 20px !important;
-  border-radius: 5px;
-  max-width: max-content;
-  color: var(--btn);
-  display: block;
   font-size: 2rem;
+  color: var(--btn);
+  padding: 10px;
+  pointer-events: none;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: 0.5s;
   opacity: 0;
-  margin: 16px auto 0 auto;
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.active .link-externo {
-  display: block;
+.img-active .link-externo {
   opacity: 1;
-  transition: 0.3s;
-  margin: 16px auto 0 auto;
+  transition: 0.5s;
+  pointer-events: initial;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .link-externo:hover,
 .link-externo:focus {
   background-color: var(--c2);
-  margin: 16px auto 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -76,7 +83,7 @@
     max-width: 800px;
     margin: 0 10px;
   }
-  .active .link-externo {
+  .img-active .link-externo {
     font-size: 0.8rem;
   }
 }

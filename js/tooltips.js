@@ -4,7 +4,7 @@ export default function initTooltip() {
   function onHover() {
     let tooltipBox = boxTooltip(this);
 
-    function onMove() {
+    function onMove(event) {
       tooltipBox.style.top = event.pageY + 10 + "px";
       tooltipBox.style.left = event.pageX + 10 + "px";
     }

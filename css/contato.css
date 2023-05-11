@@ -26,6 +26,7 @@
   line-height: 85%;
   font-weight: 500;
   margin-bottom: 128px;
+  color: var(--txt);
 }
 
 .formulario {

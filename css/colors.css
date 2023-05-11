@@ -116,29 +116,6 @@
 }
 
 /* ======================================== CORES HABILIDADES */
-[data-theme="light-purple"],
-[data-theme="light-pink"],
-[data-theme="light-red"],
-[data-theme="light-green"] {
-  --github: #00000088;
-}
-
-[data-theme="light-purple"],
-[data-theme="light-pink"],
-[data-theme="light-red"],
-[data-theme="light-green"] .tech:hover {
-  --github: #000000;
-}
-
-[data-theme="light-purple"],
-[data-theme="light-pink"],
-[data-theme="light-red"],
-[data-theme="light-green"]
-  .scroll-ativo
-  .animaTech1
-  li:nth-child(5):hover::before {
-  --github: #000000;
-}
 
 :root {
   --html: #e54c2188;
@@ -146,8 +123,6 @@
   --js: #efd81d88;
   --git: #e84d3188;
   --github: #ffffff88;
-  --react: #5ed3f388;
-  --vue: #3fb27f88;
 }
 
 .tech:hover {
@@ -156,24 +131,72 @@
   --js: #efd81d;
   --git: #e84d31;
   --github: #ffffff;
-  --react: #5ed3f3;
-  --vue: #3fb27f;
 }
 
-.scroll-ativo .animaTech1 li:nth-child(1):hover::before,
-.scroll-ativo .animaTech1 li:nth-child(2):hover::before,
-.scroll-ativo .animaTech1 li:nth-child(3):hover::before,
-.scroll-ativo .animaTech1 li:nth-child(4):hover::before,
-.scroll-ativo .animaTech1 li:nth-child(5):hover::before,
-.scroll-ativo .animaTech2 li:nth-child(1):hover::before,
-.scroll-ativo .animaTech2 li:nth-child(2):hover::before {
+.scroll-ativo .animaTech li:nth-child(1):hover::before,
+.scroll-ativo .animaTech li:nth-child(2):hover::before,
+.scroll-ativo .animaTech li:nth-child(3):hover::before,
+.scroll-ativo .animaTech li:nth-child(4):hover::before,
+.scroll-ativo .animaTech li:nth-child(5):hover::before {
   --html: #e54c21;
   --css: #1572b6;
   --js: #efd81d;
   --git: #e84d31;
   --github: #ffffff;
-  --react: #5ed3f3;
-  --vue: #3fb27f;
 }
 
 /* ======================================== CORES HABILIDADES */
+
+[data-theme="light-purple"] {
+  --github: #00000088;
+}
+[data-theme="light-pink"] {
+  --github: #00000088;
+}
+[data-theme="light-red"] {
+  --github: #00000088;
+}
+[data-theme="light-green"] {
+  --github: #00000088;
+}
+
+[data-theme="light-purple"] .tech:hover {
+  --github: #000000;
+}
+[data-theme="light-pink"] .tech:hover {
+  --github: #000000;
+}
+[data-theme="light-red"] .tech:hover {
+  --github: #000000;
+}
+[data-theme="light-green"] .tech:hover {
+  --github: #000000;
+}
+
+[data-theme="light-purple"]
+  .scroll-ativo
+  .animaTech
+  li:nth-child(5):hover::before {
+  --github: #000000;
+}
+
+[data-theme="light-pink"]
+  .scroll-ativo
+  .animaTech
+  li:nth-child(5):hover::before {
+  --github: #000000;
+}
+
+[data-theme="light-red"]
+  .scroll-ativo
+  .animaTech
+  li:nth-child(5):hover::before {
+  --github: #000000;
+}
+
+[data-theme="light-green"]
+  .scroll-ativo
+  .animaTech
+  li:nth-child(5):hover::before {
+  --github: #000000;
+}

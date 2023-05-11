@@ -1,154 +1,206 @@
 export default class Slide {
-  constructor(slide, wrapper) {
-    this.slide = document.querySelector(slide);
+  constructor(wrapper, slide) {
     this.wrapper = document.querySelector(wrapper);
+    this.slide = document.querySelector(slide);
 
-    this.dist = {
-      finalPosition: 0,
-      startX: 0,
-      movement: 0,
-    };
-    this.activeClass = "active";
+    this.initialPosition = 0;
+    this.finalPosition = 0;
+
+    this.movementStart = 0;
+    this.movementStop = 0;
   }
 
-  transition(active) {
-    this.slide.style.transition = active ? "transform .5s" : 0;
+  // CLIQUE E TOQUE SOBRE A IMAGEM
+
+  startMouse(event) {
+    event.preventDefault();
+    this.initialPosition = event.clientX;
+    this.slide.addEventListener("mousemove", this.mouseMovement);
+    this.slideTransition(false);
   }
 
-  moveSlide(distX) {
-    this.dist.movementPosition = distX;
-    this.slide.style.transform = `translate3d(${distX}px, 0, 0)`;
+  startTouch(event) {
+    this.initialPosition = event.changedTouches[0].clientX;
+    this.slide.addEventListener("touchmove", this.touchMovement);
+    this.slideTransition(false);
   }
 
-  updatePosition(clientX) {
-    this.dist.movement = this.dist.startX - clientX;
-    return this.dist.finalPosition - this.dist.movement;
+  // MOVIMENTO DO CLICK E TOQUE
+
+  mouseMovement(event) {
+    const mouseAxisX = event.clientX;
+    const axisX = this.calcPosition(mouseAxisX);
+    this.slideMove(axisX);
   }
 
-  onStart(event) {
-    let moveType;
-    if (event.type === "mousedown") {
-      event.preventDefault();
-      this.dist.startX = event.clientX;
-      moveType = "mousemove";
-    } else {
-      this.dist.startX = event.changedTouches[0].clientX;
-      moveType = "touchmove";
-    }
-
-    this.wrapper.addEventListener(moveType, this.onMove);
-    this.transition(false);
+  touchMovement(event) {
+    const touchAxisX = event.changedTouches[0].clientX;
+    const axisX = this.calcPosition(touchAxisX);
+    this.slideMove(axisX);
   }
 
-  onMove(event) {
-    const pointerPosition =
-      event.type === "mousemove"
-        ? event.clientX
-        : event.changedTouches[0].clientX;
+  // FIM DO CLIQUE E TOQUE
 
-    const finalPosition = this.updatePosition(pointerPosition);
-    this.moveSlide(finalPosition);
+  onLeave() {
+    this.slide.removeEventListener("mousemove", this.mouseMovement);
+    this.slide.removeEventListener("touchmove", this.mouseMovement);
+    this.movementStop = this.finalPosition;
+    this.changeImgsOnLeave();
+    this.slideTransition(true);
   }
 
-  onEnd(event) {
-    const moveType = event.type === "mouseup" ? "mousemove" : "touchmove";
-    this.wrapper.removeEventListener(moveType, this.onMove);
-    this.dist.finalPosition = this.dist.movementPosition;
-    this.transition(true);
-    this.changeSlideOnEnd();
+  // CALCULAR POSIÇÕES
+
+  calcPosition(clientX) {
+    this.movementStart = this.initialPosition - clientX;
+    return this.movementStop - this.movementStart;
   }
 
-  changeSlideOnEnd() {
-    if (this.dist.movement > 120 && this.index.next !== undefined) {
-      this.activeNextSlide();
-    } else if (this.dist.movement < -120 && this.index.prev !== undefined) {
-      this.activePrevSlide();
-    } else {
-      this.changeSlide(this.index.active);
-    }
+  // MOVER SLIDE
+
+  slideMove(axisX) {
+    this.finalPosition = axisX;
+    this.slide.style.transform = `translate3D(${axisX}px, 0 , 0)`;
   }
 
-  addSlideEvents() {
-    this.wrapper.addEventListener("mousedown", this.onStart);
-    this.wrapper.addEventListener("touchstart", this.onStart);
-    this.wrapper.addEventListener("mouseup", this.onEnd);
-    this.wrapper.addEventListener("touchend", this.onEnd);
-  }
+  ///////////////////////////////// CONFIGURAÇÕES DE POSICIONAMENTO DE IMAGEM
 
-  // Slides config
+  // DESESTRUTURAR IMAGENS EM ARRAY
 
-  slidePosition(slide) {
-    const margin = (this.wrapper.offsetWidth - slide.offsetWidth) / 2;
-    return -(slide.offsetLeft - margin);
-  }
-
-  slidesConfig() {
-    this.slideArray = [...this.slide.children].map((element) => {
-      const position = this.slidePosition(element);
+  positionConfigs() {
+    this.itens = [...this.slide.children].map((element) => {
+      const position = this.calcImgPosition(element);
       return {
-        position,
-        element,
+        position: position,
+        element: element,
       };
     });
   }
 
-  slidesIndexNav(index) {
-    const last = this.slideArray.length - 1;
-    this.index = {
+  // CALCULAR POSIÇÃO CENTRO IMAGEM
+
+  calcImgPosition(img) {
+    const margin = (this.wrapper.offsetWidth - img.offsetWidth) / 2;
+    return -(img.offsetLeft - margin);
+  }
+
+  // POSICIONAR IMAGEM AO CENTRO
+
+  slideCenter(index) {
+    const currentSlide = this.itens[index];
+    this.slideMove(currentSlide.position);
+    this.navImgs(index);
+    this.movementStop = currentSlide.position;
+    this.activeImg();
+  }
+
+  // SALVAR INDEX DAS IMAGENS ANTERIOR, ATUAL E PROXIMA
+
+  navImgs(index) {
+    const last = this.itens.length - 1;
+    this.navImages = {
       prev: index ? index - 1 : undefined,
-      active: index,
+      current: index,
       next: index === last ? undefined : index + 1,
     };
   }
 
-  changeSlide(index) {
-    const activeSlide = this.slideArray[index];
-    this.moveSlide(activeSlide.position);
-    this.slidesIndexNav(index);
-    this.dist.finalPosition = activeSlide.position;
-    this.changeActiveSlide();
+  // TROCAR IMAGENS
+
+  changeImgsOnLeave() {
+    if (this.movementStart > 100 && this.navImages.next !== undefined) {
+      this.nextImg();
+    } else if (this.movementStart < -100 && this.navImages.prev !== undefined) {
+      this.prevImg();
+    } else {
+      this.slideCenter(this.navImages.current);
+    }
   }
 
-  changeActiveSlide() {
-    this.slideArray.forEach((item) =>
-      item.element.classList.remove(this.activeClass)
-    );
-    this.slideArray[this.index.active].element.classList.add(this.activeClass);
+  // ATIVAR PROXIMA
+
+  nextImg() {
+    if (this.navImages.next !== undefined) {
+      this.slideCenter(this.navImages.next);
+    }
+  }
+  // ATIVAR ANTERIOR
+
+  prevImg() {
+    if (this.navImages.prev !== undefined) {
+      this.slideCenter(this.navImages.prev);
+    }
   }
 
-  activePrevSlide() {
-    if (this.index.prev !== undefined) this.changeSlide(this.index.prev);
-  }
+  // REPOSICIONAR IMAGEM COM MUDANÇAS DE TAMANHO DE TELA
 
-  activeNextSlide() {
-    if (this.index.next !== undefined) this.changeSlide(this.index.next);
-  }
-
-  onResize() {
+  resize() {
     setTimeout(() => {
-      this.slidesConfig();
-      this.changeSlide(this.index.active);
-    }, 500);
+      this.positionConfigs();
+      this.slideCenter(this.navImages.current);
+    }, 1000);
   }
 
-  addResizeEvent() {
-    window.addEventListener("resize", this.onResize);
+  resizeWindow() {
+    window.addEventListener("resize", this.resize);
   }
+
+  ///////////////////////////////// CONFIGURAÇÕES DE ANIMAÇÃO
+
+  //  ATIVAR ANIMAÇÃO
+
+  slideTransition(start) {
+    this.slide.style.transition = start ? "transform 0.5s" : "";
+  }
+
+  // ADICIONAR CLASSE A IMAGEM ATIVA
+
+  activeImg() {
+    this.itens.forEach((item) => {
+      item.element.classList.remove("img-active");
+    });
+    this.itens[this.navImages.current].element.classList.add("img-active");
+  }
+
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+
+  // INICIAR EVENTOS DE CLIQUE E TOQUE
+
+  startEvents() {
+    this.wrapper.addEventListener("mousedown", this.startMouse);
+    this.wrapper.addEventListener("touchstart", this.startTouch);
+    this.wrapper.addEventListener("mouseup", this.onLeave);
+    this.wrapper.addEventListener("touchend", this.onLeave);
+  }
+
+  // BIND DOS EVENTOS
 
   bindEvents() {
-    this.onStart = this.onStart.bind(this);
-    this.onMove = this.onMove.bind(this);
-    this.onEnd = this.onEnd.bind(this);
-    this.onResize = this.onResize.bind(this);
+    this.startMouse = this.startMouse.bind(this);
+    this.startTouch = this.startTouch.bind(this);
+    this.mouseMovement = this.mouseMovement.bind(this);
+    this.touchMovement = this.touchMovement.bind(this);
+    this.onLeave = this.onLeave.bind(this);
+    this.resize = this.resize.bind(this);
   }
+
+  // INICIALIZAR MODULO
 
   init() {
     this.bindEvents();
-    this.transition(true);
-    this.addSlideEvents();
-    this.slidesConfig();
-    this.addResizeEvent();
-    this.changeSlide(1);
+    this.startEvents();
+    this.positionConfigs();
+    this.slideTransition(true);
+    this.resizeWindow();
 
     return this;
   }

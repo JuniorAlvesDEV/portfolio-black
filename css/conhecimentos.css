@@ -3,30 +3,6 @@
   overflow: hidden;
 }
 
-.titulo-conhecimentos {
-  color: var(--txt);
-  font-size: 7rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.texto-conhecimentos {
-  color: #777777;
-  font-size: 3rem;
-  margin-bottom: 128px;
-}
-
-.estudado {
-  margin-bottom: 128px;
-}
-
-.titulo2 {
-  font-size: 4rem;
-  color: var(--txt);
-  font-weight: 400;
-  margin-bottom: 64px;
-}
-
 .techs {
   display: flex;
   justify-content: center;
@@ -46,8 +22,7 @@
   position: relative;
 }
 
-.animaTech1 li::before,
-.animaTech2 li::before {
+.animaTech li::before {
   content: "";
   position: absolute;
   display: block;
@@ -73,46 +48,30 @@
   opacity: 1;
 }
 
-.scroll-ativo .animaTech1 li:nth-child(1)::before {
+.scroll-ativo .animaTech li:nth-child(1)::before {
   animation: animaTech3 1s;
   animation-delay: 2s;
   background-color: var(--html);
 }
-.scroll-ativo .animaTech1 li:nth-child(2)::before {
+.scroll-ativo .animaTech li:nth-child(2)::before {
   animation: animaTech3 1s;
   animation-delay: 2.2s;
   background-color: var(--css);
 }
-.scroll-ativo .animaTech1 li:nth-child(3)::before {
+.scroll-ativo .animaTech li:nth-child(3)::before {
   animation: animaTech3 1s;
   animation-delay: 2.4s;
   background-color: var(--js);
 }
-.scroll-ativo .animaTech1 li:nth-child(4)::before {
+.scroll-ativo .animaTech li:nth-child(4)::before {
   animation: animaTech3 1s;
   animation-delay: 2.6s;
   background-color: var(--git);
 }
-.scroll-ativo .animaTech1 li:nth-child(5)::before {
+.scroll-ativo .animaTech li:nth-child(5)::before {
   animation: animaTech3 1s;
   animation-delay: 2.8s;
   background-color: var(--github);
-}
-[data-theme="light"] .scroll-ativo .animaTech1 li:nth-child(5)::before {
-  animation: animaTech3 1s;
-  animation-delay: 2.8s;
-  background-color: var(--github);
-}
-
-.scroll-ativo .animaTech2 li:nth-child(1)::before {
-  animation: animaTech3 1s;
-  animation-delay: 3s;
-  background-color: var(--react);
-}
-.scroll-ativo .animaTech2 li:nth-child(2)::before {
-  animation: animaTech3 1s;
-  animation-delay: 3.2s;
-  background-color: var(--vue);
 }
 
 @keyframes animaTech3 {
@@ -128,39 +87,31 @@
   }
 }
 
-.animaTech1 li,
-.animaTech2 li {
+.animaTech li {
   opacity: 0;
 }
 
-.scroll-ativo .animaTech1 li:nth-child(1) {
+.scroll-ativo .animaTech li:nth-child(1) {
   animation: animaTech2 1s forwards;
   animation-delay: 0.6s;
 }
-.scroll-ativo .animaTech1 li:nth-child(2) {
+.scroll-ativo .animaTech li:nth-child(2) {
   animation: animaTech2 1s forwards;
   animation-delay: 0.8s;
 }
-.scroll-ativo .animaTech1 li:nth-child(3) {
+.scroll-ativo .animaTech li:nth-child(3) {
   animation: animaTech2 1s forwards;
   animation-delay: 1s;
 }
-.scroll-ativo .animaTech1 li:nth-child(4) {
+.scroll-ativo .animaTech li:nth-child(4) {
   animation: animaTech2 1s forwards;
   animation-delay: 1.2s;
 }
-.scroll-ativo .animaTech1 li:nth-child(5) {
+.scroll-ativo .animaTech li:nth-child(5) {
   animation: animaTech2 1s forwards;
   animation-delay: 1.4s;
 }
-.scroll-ativo .animaTech2 li:nth-child(1) {
-  animation: animaTech2 1s forwards;
-  animation-delay: 1.6s;
-}
-.scroll-ativo .animaTech2 li:nth-child(2) {
-  animation: animaTech2 1s forwards;
-  animation-delay: 1.8s;
-}
+
 @keyframes animaTech2 {
   0% {
     opacity: 0;
@@ -179,14 +130,6 @@
 }
 
 @media (max-width: 1280px) {
-  .titulo-conhecimentos {
-    font-size: 5rem;
-  }
-
-  .texto-conhecimentos {
-    font-size: 2rem;
-  }
-
   .techs {
     gap: 64px;
     align-items: center;
@@ -197,21 +140,6 @@
 @media (max-width: 768px) {
   #conhecimentos {
     padding-bottom: 128px;
-  }
-  .titulo-conhecimentos {
-    font-size: 2rem;
-  }
-
-  .texto-conhecimentos {
-    font-size: 1rem;
-    margin-bottom: 64px;
-  }
-  .estudado {
-    margin-bottom: 64px;
-  }
-  .titulo2 {
-    font-size: 2rem;
-    margin-bottom: 32px;
   }
 
   .techs {
@@ -229,8 +157,7 @@
     padding: 5px 10px;
   }
 
-  .animaTech1 li::before,
-  .animaTech2 li::before {
+  .animaTech li::before {
     bottom: -30px;
   }
 
