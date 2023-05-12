@@ -26,7 +26,7 @@ export default function instagramImages() {
     );
 
     initSlideSobre.init();
-    initSlideSobre.slideCenter(3);
+    initSlideSobre.slideCenter(0);
   }
 
   function createImages(img) {

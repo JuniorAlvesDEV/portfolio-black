@@ -36,7 +36,7 @@ function initJSModules() {
 
   setTimeout(() => {
     initSlideProjetos.init();
-    initSlideProjetos.slideCenter(1);
+    initSlideProjetos.slideCenter(0);
   }, 1000);
 }
 initJSModules();
@@ -44,3 +44,7 @@ initJSModules();
 formulario();
 initInstagramImages();
 initTooltip();
+
+const memoria = window;
+console.log(memoria);
+console.log("memoria");
