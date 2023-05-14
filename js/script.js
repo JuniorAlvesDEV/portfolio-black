@@ -32,7 +32,7 @@ function initJSModules() {
   initScrollSuave.init();
   initScrollAnimado.init();
   initThemes.init();
-  initCursor.init();
+  // initCursor.init();
 
   setTimeout(() => {
     initSlideProjetos.init();
@@ -44,7 +44,3 @@ initJSModules();
 formulario();
 initInstagramImages();
 initTooltip();
-
-const memoria = window;
-console.log(memoria);
-console.log("memoria");

@@ -34,8 +34,11 @@ export default class Slide {
   }
 
   touchMovement(event) {
+    event.preventDefault();
+
     const touchAxisX = event.changedTouches[0].clientX;
     const axisX = this.calcPosition(touchAxisX);
+
     this.slideMove(axisX);
   }
 
@@ -44,6 +47,7 @@ export default class Slide {
   onLeave() {
     this.slide.removeEventListener("mousemove", this.mouseMovement);
     this.slide.removeEventListener("touchmove", this.mouseMovement);
+
     this.movementStop = this.finalPosition;
     this.changeImgsOnLeave();
     this.slideTransition(true);
@@ -110,8 +114,10 @@ export default class Slide {
   changeImgsOnLeave() {
     if (this.movementStart > 100 && this.navImages.next !== undefined) {
       this.nextImg();
+      this.movementStart = 0;
     } else if (this.movementStart < -100 && this.navImages.prev !== undefined) {
       this.prevImg();
+      this.movementStart = 0;
     } else {
       this.slideCenter(this.navImages.current);
     }
