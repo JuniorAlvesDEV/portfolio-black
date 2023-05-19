@@ -32,7 +32,7 @@ function initJSModules() {
   initScrollSuave.init();
   initScrollAnimado.init();
   initThemes.init();
-  // initCursor.init();
+  initCursor.init();
 
   setTimeout(() => {
     initSlideProjetos.init();
